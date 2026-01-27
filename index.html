@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UCCivSoc</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css_stylesheets/overall_styles.css" />
+    <link rel="stylesheet" href="css_stylesheets/index_stylesheet.css">
+    <link rel="stylesheet" href="css_stylesheets/mahi_stylesheet.css">
+    <link rel="stylesheet" href="css_stylesheets/partner_slider_stylesheet.css">
+    <link rel="stylesheet" href="css_stylesheets/what_we_do_stylesheet.css">
     <link
       rel="icon"
       type="image/png"
@@ -54,51 +58,87 @@
             <li class="slide" data-active>
               <img src="Images/P1020431.jpg" alt="Event 3" />
             </li>
-            <li class="slide" data-active>
-              <img src="Images/IMG_5039.jpeg" alt="Event 1" />
+            <li class="slide"> <img src="Images/IMG_5039.jpeg" alt="Event 1" />
             </li>
             <li class="slide">
               <img src="Images/IMG_0595.jpeg" alt="Event 2" />
             </li>
           </ul>
         </div>
+        
         <h1 class="welcome-title" data-short="CivSoc">
           UC Civil & Environmental Engineering Society
         </h1>
+        
         <div class="counter-container">
           <h2>Members: <span class="counter">0</span></h2>
         </div>
+      
+        <div class="city-skyline"></div>
       </section>
+
+      
       <div class="slider-wrapper">
         <div
           class="slider"
-          style="--width: 100px; --height: 50px; --quantity: 7"
+          style="--width: 100px; --height: 50px; --quantity: 8"
         >
           <div class="item-cont">
             <div class="item" style="--position: 1">
               <p>Thanks To Our Partners!</p>
             </div>
+      
             <div class="item" style="--position: 2">
-              <img src="Images/RobertBird small aspect.png" alt="Robert Bird Group" />
+              <a href="https://www.robertbird.com/" target="_blank" rel="noopener">
+                <img src="Images/RobertBird small aspect.png" alt="Robert Bird Group" />
+              </a>
             </div>
+      
             <div class="item" style="--position: 3">
-              <img src="Images/do-footer-logo.svg" alt="Davis Oglivie" />
+              <a href="https://isaac.co.nz/" target="_blank" rel="noopener">
+                <img src="Images/Isaac copy.png" alt="Isaac Construction" />
+              </a>
             </div>
+      
             <div class="item" style="--position: 4">
-              <img src="Images/Isaac copy.png" alt="Isaac Construction" />
+              <a
+                href="https://www.canterbury.ac.nz/study/academic-study/engineering/schools-and-departments-engineering-forestry-product-design/civil-and-natural-resources-engineering-department"
+                target="_blank"
+                rel="noopener"
+              >
+                <img src="Images/UC_logo.png" alt="UC Civil" />
+              </a>
             </div>
+      
             <div class="item" style="--position: 5">
-              <img src="Images/UC_logo.png" alt="UC Civil" />
+              <a href="https://ucsa.org.nz/" target="_blank" rel="noopener">
+                <img src="Images/UCSA_logo.png" alt="UCSA" />
+              </a>
             </div>
+      
             <div class="item" style="--position: 6">
-              <img src="Images/RGB-Kotahi-Full-Colour.png" alt="Kotahi" />
+              <a href="https://www.stantec.com/" target="_blank" rel="noopener">
+                <img src="Images/Stantec.png" alt="Stantec" />
+              </a>
             </div>
+      
             <div class="item" style="--position: 7">
-              <img src="Images/UCSA_logo.png" alt="UCSA" />
+              <a href="https://www.seipp.co.nz/" target="_blank" rel="noopener">
+                <img src="Images/seipp-logo.png" alt="Seipp Construction" />
+              </a>
             </div>
+
+            <div class="item" style="--position: 8">
+              <a href="https://do.co.nz/" target="_blank" rel="noopener">
+                <img src="Images/do_full.png" alt="Davis Oglivie" />
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
+
+
       <section
         class="mahi"
         id="mahi"
@@ -128,6 +168,8 @@
           </div>
         </div>
       </section>
+
+
       <section id="what-we-do">
         <h2>What We Do</h2>
         <div class="wwd-wrapper">
@@ -158,7 +200,10 @@
             </a>
           </div>
         </div>
+        </div>
+
       </section>
+
 
       <section
         class="sponsors"
@@ -172,21 +217,27 @@
                 <div class="sponser-logo-box">
                   <img src="Images/Isaac copy.png" alt="" />
                 </div>
+                <div class="sponser-logo-box">
+                  <img src="Images/fulton-logo.jpeg" alt="" />
+                </div>
+                <div class="sponser-logo-box">
+                  <img src="Images/seipp-logo.png" alt="" />
+                </div>
               </div>
 
               <div class="logo-container">
-                <div class="sponser-logo-box">
-                  <img src="Images/RGB-Kotahi-Full-Colour.png" alt="" />
-                </div>
                 <div class="sponser-logo-box">
                   <img src="Images/970px-Robert_bird_logo.png" alt="" />
                 </div>
                 <div class="sponser-logo-box">
-                  <img src="Images/do-footer-logo.svg" alt="" />
+                  <img src="Images/Stantec.png" alt="" />
                 </div>
               </div>
 
               <div class="logo-container">
+                <div class="sponser-logo-box">
+                  <img src="Images/do_full.png" alt="" />
+                </div>
                 <div class="sponser-logo-box">
                   <img
                     src="Images/UC_logo.png"
@@ -220,6 +271,8 @@
           </div>
         </div>
       </section>
+
+
     </main>
     <footer>
       <div class="footer-container">
@@ -257,12 +310,34 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
       $(window).on("load", function () {
+        // Normal fade-out after full load
         setTimeout(function () {
           $(".loader-wrapper").fadeOut(600);
         }, 2000);
       });
-    </script>
-    <script>
+    
+      // Create the dismiss button after page starts loading
+      $(document).ready(function () {
+        // Add the X button to the loader
+        $(".loader-wrapper").append('<div class="loader-dismiss">×</div>');
+    
+        // If the page is still not fully loaded after 3 sec, show the button
+        setTimeout(function () {
+          if (!$("body").hasClass("page-loaded")) {
+            $(".loader-dismiss").addClass("show");
+          }
+        }, 3000);
+    
+        // When the X is clicked, hide the loader immediately
+        $(document).on("click", ".loader-dismiss", function () {
+          $(".loader-wrapper").fadeOut(400);
+        });
+      });
+    
+      // Mark when page actually finishes loading
+      $(window).on("load", function () {
+        $("body").addClass("page-loaded");
+      });
       const counterE1 = document.querySelector(".counter");
       let counterNumber = 0;
 

@@ -1,0 +1,96 @@
+/* ================= WHAT WE DO (BANDS) ================= */
+#what-we-do {
+    text-align: center;
+    overflow: hidden;
+    padding: 40px 0;
+  }
+  
+  #what-we-do .wwd-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    border-top: 5px solid var(--accent-3);
+    border-bottom: 5px solid var(--accent-3);
+    
+    /* Optional: Adds space between the line and your content */
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    max-width: fit-content;
+    margin-left: auto;
+  margin-right: auto;
+
+  }
+  
+  #what-we-do h2 {
+    font-size: clamp(1.5rem, 8vw, 3rem);
+    letter-spacing: 1.2rem;
+    margin-bottom: 40px;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  #what-we-do .bands-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  #what-we-do .bands-container p {
+    width: 300px;
+    margin: 0;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+  }
+  
+  
+  #what-we-do figure {
+    width: 300px;
+    height: 200px;
+    margin: 0;
+    overflow: hidden;
+    background: #362a2a;
+    position: relative;
+    transition: transform .3s ease, box-shadow .3s ease;
+    border-radius:5px;
+  
+  }
+  
+  #what-we-do figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #what-we-do figure figcaption {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2em;
+    white-space: nowrap;
+    transform: scaleY(2);
+    transition: transform .3s ease, text-shadow .3s ease;
+  }
+  
+  #what-we-do figure figcaption:hover { transform: scaleX(1.05); }
+  #what-we-do figure:hover { transform: scale(1.1); }
+  
+  
+  @media (max-width: 720px) {
+    #what-we-do .wwd-wrapper { flex-direction: column; align-items: center; }
+    #what-we-do .bands-container { flex-direction: row; width: 100%; justify-content: center; }
+  }
+
+
+
+ 

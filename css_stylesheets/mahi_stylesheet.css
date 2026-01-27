@@ -1,0 +1,42 @@
+/* ================= MAHI (about/mission) ================= */
+.mahi {
+    position: relative;
+    padding: 60px 20px;
+    color: #000;
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+  }
+  .mahi::before {
+    content: "";
+    position: absolute; inset: 0; background: rgba(255,255,255,0.85); z-index: 0;
+  }
+  .mahi .content-row {
+    display: flex; gap: 40px; align-items: flex-start; position: relative; z-index: 1; flex-wrap: nowrap;
+  }
+  .mahi .content-row img {
+    flex: 0 1 auto; width: 800px; max-width: 80vw; height: auto; border-radius: 4px; object-fit: cover; transition: transform .3s ease;
+  }
+  .mahi .text-content { flex: 1 1 auto; min-width: 250px; color: black; font-size: 1.1em; line-height: 1.6; text-align: left; }
+  
+  .mahi::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: rgba(255,255,255,0.85);
+    z-index: 0;
+  }
+  
+  .mahi-alt {
+    color: white;
+  }
+  .mahi-alt::before {
+    background: rgba(0,0,0,0.85);
+  }
+  .mahi-alt .text-content {
+    color: white;
+  }
+  @media (max-width: 1200px) {
+    .mahi .content-row { flex-direction: column; align-items: center; gap: 20px; }
+    .mahi .content-row img, .mahi .text-content { width: 90%; }
+    .mahi .text-content { margin-top: 20px; }
+  }

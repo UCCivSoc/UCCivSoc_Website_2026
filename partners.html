@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UC Civil and Environmental Society - Events Page</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css_stylesheets/overall_styles.css" />
+    <link rel="stylesheet" href="css_stylesheets/partner_page_stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="css_stylesheets/partner_slider_stylesheet.css"
+    />
     <link rel="icon" type="image/png" href="favicon.png" />
   </head>
   <body>
@@ -28,43 +33,81 @@
           <li><a href="partners.html">Partners</a></li>
           <li><a href="exec.html">Exec</a></li>
           <li><a href="merch.html">Merch</a></li>
-          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfUcbxSflQQCPFkHkFvFNmYPTb5qEFVTAjzUKGGhvaF5h3k-A/viewform?usp=dialog" class="register">REGISTER</a></li>
+          <li>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfUcbxSflQQCPFkHkFvFNmYPTb5qEFVTAjzUKGGhvaF5h3k-A/viewform?usp=dialog"
+              class="register"
+              >REGISTER</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="event-heading">
+      <div class="generic-heading">
         <h1>Our Partners</h1>
       </div>
       <div class="slider-wrapper">
         <div
           class="slider"
-          style="--width: 100px; --height: 50px; --quantity: 7"
+          style="--width: 100px; --height: 50px; --quantity: 8"
         >
           <div class="item-cont">
             <div class="item" style="--position: 1">
               <p>Thanks To Our Partners!</p>
             </div>
+
             <div class="item" style="--position: 2">
-              <img
-                src="Images/RobertBird small aspect.png"
-                alt="Robert Bird Group"
-              />
+              <a
+                href="https://www.robertbird.com/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="Images/RobertBird small aspect.png"
+                  alt="Robert Bird Group"
+                />
+              </a>
             </div>
+
             <div class="item" style="--position: 3">
-              <img src="Images/do-footer-logo.svg" alt="Davis Oglivie" />
+              <a href="https://isaac.co.nz/" target="_blank" rel="noopener">
+                <img src="Images/Isaac copy.png" alt="Isaac Construction" />
+              </a>
             </div>
+
             <div class="item" style="--position: 4">
-              <img src="Images/Isaac copy.png" alt="Isaac Construction" />
+              <a
+                href="https://www.canterbury.ac.nz/study/academic-study/engineering/schools-and-departments-engineering-forestry-product-design/civil-and-natural-resources-engineering-department"
+                target="_blank"
+                rel="noopener"
+              >
+                <img src="Images/UC_logo.png" alt="UC Civil" />
+              </a>
             </div>
+
             <div class="item" style="--position: 5">
-              <img src="Images/UC_logo.png" alt="UC Civil" />
+              <a href="https://ucsa.org.nz/" target="_blank" rel="noopener">
+                <img src="Images/UCSA_logo.png" alt="UCSA" />
+              </a>
             </div>
+
             <div class="item" style="--position: 6">
-              <img src="Images/RGB-Kotahi-Full-Colour.png" alt="Kotahi" />
+              <a href="https://www.stantec.com/" target="_blank" rel="noopener">
+                <img src="Images/Stantec.png" alt="Stantec" />
+              </a>
             </div>
+
             <div class="item" style="--position: 7">
-              <img src="Images/UCSA_logo.png" alt="UCSA" />
+              <a href="https://www.seipp.co.nz/" target="_blank" rel="noopener">
+                <img src="Images/seipp-logo.png" alt="Seipp Construction" />
+              </a>
+            </div>
+
+            <div class="item" style="--position: 8">
+              <a href="https://do.co.nz/" target="_blank" rel="noopener">
+                <img src="Images/do_full.png" alt="Davis Oglivie" />
+              </a>
             </div>
           </div>
         </div>
@@ -84,13 +127,58 @@
             </div>
             <nav class="nav-partners">
               <ul>
-                <li><a href="https://isaac.co.nz/join-the-team">Intern & Graduate Roles</a></li>
+                <li>
+                  <a href="https://isaac.co.nz/join-the-team"
+                    >Intern & Graduate Roles</a
+                  >
+                </li>
               </ul>
             </nav>
           </div>
           <div class="sponsor-pane">
             <div class="sponser-img-container">
-              <img src="Images/RobertBird small aspect.png" alt="" />
+              <img src="Images/fulton-logo.jpeg" alt="" />
+            </div>
+            <div class="pane-content">
+              <h3>Fulton Hogan</h3>
+              <p>
+                International civil infrastructure company delivering major
+                road, rail, and utility projects.
+              </p>
+            </div>
+            <nav class="nav-partners">
+              <ul>
+                <li>
+                  <a href="https://www.fultonhogan.com/join-our-team/"
+                    >Intern & Graduate Roles</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="sponsor-pane">
+            <div class="sponser-img-container">
+              <img src="Images/seipp-logo.png" alt="" />
+            </div>
+            <div class="pane-content">
+              <h3>Seipp Construction</h3>
+              <p>Specialising in complex and unique drainage projects.</p>
+            </div>
+            <nav class="nav-partners">
+              <ul>
+                <li>
+                  <a href="https://www.seipp.co.nz/careers"
+                    >Intern & Graduate Roles</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="sponsor-pane">
+            <div class="sponser-img-container">
+              <img src="Images/970px-Robert_bird_logo.png" alt="" />
             </div>
             <div class="pane-content">
               <h3>Robert Bird</h3>
@@ -101,13 +189,40 @@
             </div>
             <nav class="nav-partners">
               <ul>
-                <li><a href="https://www.robertbird.com/careers/">Intern & Graduate Roles</a></li>
+                <li>
+                  <a href="https://www.robertbird.com/careers/"
+                    >Intern & Graduate Roles</a
+                  >
+                </li>
               </ul>
             </nav>
           </div>
+
           <div class="sponsor-pane">
             <div class="sponser-img-container">
-              <img src="Images/do-footer-logo.svg" alt="" />
+              <img src="Images/Stantec.png" alt="" />
+            </div>
+            <div class="pane-content">
+              <h3>Stantec</h3>
+              <p>
+                International civil infrastructure company delivering major
+                road, rail, and utility projects.
+              </p>
+            </div>
+            <nav class="nav-partners">
+              <ul>
+                <li>
+                  <a href="https://www.stantec.com/en/careers"
+                    >Intern & Graduate Roles</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="sponsor-pane">
+            <div class="sponser-img-container">
+              <img src="Images/do_full.png" alt="" />
             </div>
             <div class="pane-content">
               <h3>Davis Oglivie</h3>
@@ -118,27 +233,15 @@
             </div>
             <nav class="nav-partners">
               <ul>
-                <li><a href="https://do.co.nz/careers/">Intern & Graduate Roles</a></li>
+                <li>
+                  <a href="https://do.co.nz/careers/"
+                    >Intern & Graduate Roles</a
+                  >
+                </li>
               </ul>
             </nav>
           </div>
-          <div class="sponsor-pane">
-            <div class="sponser-img-container">
-              <img src="Images/RGB-Kotahi-Full-Colour.png" alt="" />
-            </div>
-            <div class="pane-content">
-              <h3>Kotahi</h3>
-              <p>
-                Specialising in structural & civil engineering for projects
-                nationwide.
-              </p>
-            </div>
-            <nav class="nav-partners">
-              <ul>
-                <li><a href="https://www.kotahistudio.co.nz/join-us">Intern & Graduate Roles</a></li>
-              </ul>
-            </nav>
-          </div>
+
           <div class="sponsor-pane">
             <div class="sponser-img-container">
               <img src="Images/UCSA_logo.png" alt="" />
@@ -156,6 +259,7 @@
               </ul>
             </nav>
           </div>
+
           <div class="sponsor-pane">
             <div class="sponser-img-container">
               <img src="Images/UC_logo.png" alt="" />
@@ -181,10 +285,7 @@
       <div class="footer-container">
         <!-- Logo on the left -->
         <div class="logofoot">
-          <img
-            src="Images/Sticker_Logo-removebg-preview.png"
-            alt="Site Logo"
-          />
+          <img src="Images/Sticker_Logo-removebg-preview.png" alt="Site Logo" />
         </div>
 
         <!-- Links on the right -->
@@ -212,7 +313,12 @@
             <li><a href="partners.html">Partners</a></li>
             <li><a href="exec.html">Exec</a></li>
             <li><a href="merch.html">Merch</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfUcbxSflQQCPFkHkFvFNmYPTb5qEFVTAjzUKGGhvaF5h3k-A/viewform?usp=dialog">REGISTER</a></li>
+            <li>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfUcbxSflQQCPFkHkFvFNmYPTb5qEFVTAjzUKGGhvaF5h3k-A/viewform?usp=dialog"
+                >REGISTER</a
+              >
+            </li>
           </ul>
         </div>
         <div class="copyright-statement">
