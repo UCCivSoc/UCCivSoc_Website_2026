@@ -152,6 +152,7 @@
     
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
+    text-indent: 0.8rem;
   }
   
   .hero-btn:hover {
@@ -170,7 +171,9 @@
   
     .hero-btn {
         padding: 12px 30px;
-        font-size: 1rem;        
+        font-size: 1.1rem;   
+        letter-spacing: 0.3rem;     
+        white-space: nowrap;
       }
 
     .welcome-title::before {
