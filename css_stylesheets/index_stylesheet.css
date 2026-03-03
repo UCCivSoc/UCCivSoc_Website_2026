@@ -109,7 +109,7 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 2px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     z-index: 10;
     transition: background-color .2s ease, transform .15s ease;
@@ -134,32 +134,59 @@
     pointer-events: none; 
   }
   
-
-  .hero-btn {
-    display: inline-block;
-    z-index: 20;
-    padding: 15px 80px;
-    border-radius: 50px;
-    
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 2rem;
-    letter-spacing: 0.8rem;
-    
-    background-color: var(--accent-1); 
-    color: white;
-    
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    text-indent: 0.8rem;
-  }
+.hero-container { /* Add this class to your <div> in the HTML */
+  display: flex;
+  flex-wrap: wrap;       /* This allows the buttons to wrap to a new line */
+  gap: 20px;             /* This creates exactly 20px of space between them */
+  justify-content: center; /* Keeps them centered horizontally as a group */
+  padding: 20px;         /* Optional: keeps them from hitting screen edges */
+}
+/* 1. Base Styles for all Hero Buttons */
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   
-  .hero-btn:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
-    filter: brightness(1.1);
-  }
+  z-index: 20;
+  width: 160px;
+  height: 40px;
+  border-radius: 2px;
+  box-sizing: border-box; /* Keeps both buttons the same height */
+  
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.1rem;
+  
+  /* Default Primary Style */
+  background-color: var(--accent-1); 
+  color: white;
+  border: 2px solid var(--accent-1); /* Border matches bg for size consistency */
+  
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+/* 3. The "Ghost" Style (Applied only to the second button) */
+.hero-btn:nth-child(2) {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  box-shadow: none; /* Ghost buttons usually look better without heavy shadows */
+}
+
+/* 4. Hover Effect for the Ghost Button */
+.hero-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+  background-color: white;
+  border: 2px solid white;
+  color: var(--accent-1); /* Text flips to your accent color */
+  filter: none; /* Disables the brightness filter from the base hover */
+}
 
   @media (max-width: 800px) {
     .welcome-title {
@@ -169,13 +196,6 @@
       margin-top: 0px;
     }
   
-    .hero-btn {
-        padding: 12px 30px;
-        font-size: 1.1rem;   
-        letter-spacing: 0.3rem;     
-        white-space: nowrap;
-      }
-
     .welcome-title::before {
       content: attr(data-short);
       position: absolute;
@@ -199,31 +219,136 @@
 
   
 
-
-  /* ================= SPONSORS SECTION ================= */
+/* ================= SPONSORS SECTION ================= */
 .sponsors {
-    position: relative; padding: 60px 20px; color: #000; background-size: cover; background-position: center;
+  position: relative; 
+  padding: 60px 20px; 
+  color: #ffffff; 
+  background-size: cover; 
+  background-position: center;
+}
+
+.sponsors::before { 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  background: rgba(60,117,184,0.75); 
+  z-index: 0; 
+}
+
+.sponsors .content-row { 
+  display: flex; 
+  gap: 40px; 
+  align-items: center; 
+  position: relative; 
+  z-index: 1; 
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sponsors .sponsor-logo,
+.sponsors .text-content { 
+  flex: 1 1 0; 
+  width: 50%;
+}
+
+.sponsors .text-content { 
+  color: #ffffff; 
+  font-size: 1.1em; 
+  line-height: 1.6; 
+  text-align: left; 
+}
+
+.sponsors .text-content h2 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+/* --- LOGO GRID LOGIC --- */
+
+.logo-parent { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 50px; /* Space between the rows of containers */
+  padding: 10px; 
+  width: 100%; 
+}
+
+.logo-container { 
+  display: grid; 
+  /* This forces exactly two columns of equal width */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px; 
+  width: 100%;
+}
+
+/* Special Case: If a container has 3 items, make the 3rd one span both columns or stay in grid */
+/* If you prefer the 3rd item to just start a new row of 2, the grid handles that automatically */
+
+.sponser-logo-box { 
+  aspect-ratio: 2 / 1; 
+  width: 100%; 
+  border-radius: 4px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: #f5f5f5; 
+  transition: transform .28s ease, box-shadow .28s ease; 
+}
+
+.sponser-logo-box img { 
+  width: 80%; 
+  height: 80%; 
+  object-fit: contain; 
+}
+
+.sponsors .nav-exec ul {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin-top: 20px;
+  list-style: none;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  /* Stack the row into a column */
+  .sponsors .content-row { 
+    flex-direction: column; 
+    gap: 40px; 
   }
-  .sponsors::before { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,0.85); z-index: 0; }
-  .sponsors .content-row { display: flex; gap: 40px; align-items: flex-start; position: relative; z-index: 1; flex-wrap: nowrap; }
-  .sponsors .sponsor-logo { flex: 0 0 700px; min-width: 500px; display:flex; justify-content:center; align-items:center; }
-  .sponsors .text-content { flex: 1 1 auto; min-width: 250px; color: black; font-size:1.1em; line-height:1.6; text-align:left; }
-  
-  /* Sponsor logos grid */
-  .sponser-logo { display:flex; justify-content:center; padding: 40px; margin: 10px 0 50px 0; width:100%; }
-  .logo-parent { display:flex; flex-direction:column; gap:30px; padding:10px; width:100%; max-width:1000px; }
-  .logo-container { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px;}
-  .logo-parent .logo-container:first-child .sponser-logo-box { width:320px; height:160px; }
-  .sponser-logo-box { height:120px; width:240px; border-radius:4px; display:flex; justify-content:center; align-items:center; background-color:#ebebeb; transition: transform .28s ease, box-shadow .28s ease; transform-origin:center; }
-  .sponser-logo-box img { width:80%; height:80%; object-fit:contain; }
-  .sponser-logo-box:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
-  
-  @media (max-width: 1200px) {
-    .sponsors .content-row { flex-direction: column; align-items: center; gap: 20px; }
-    .sponsors .sponsor-logo { flex: 1 1 100%; min-width: unset; }
-    .sponsors .text-content { width: 90%; margin-top: 20px; }
+
+  /* Make text full width and centered */
+  .sponsors .text-content { 
+    width: 100%; 
+    text-align: center;
+    flex: none;
+    max-width: 500px;
+  }
+
+  /* Center the button/nav list inside the text-content */
+  .sponsors .nav-exec ul {
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Constraint on the logo section width */
+  .sponsors .sponsor-logo { 
+    width: 100%; 
+    max-width: 500px; /* Limits the grid width so boxes aren't huge */
+    margin: 0 auto;  /* Centers the 500px block */
+    flex: none; 
+  }
+}
+
+/* Optional: Extra small mobile adjustment */
+@media (max-width: 480px) {
+  .logo-container {
+    gap: 10px; /* Tighter spacing for very small screens */
   }
   
-  @media (max-width: 720px) {
-    .sponser-logo-box { width: 150px; height: 80px; }
+  .sponsors {
+    padding: 40px 15px; /* Slightly less padding on small phones */
   }
+}
