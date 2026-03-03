@@ -10,10 +10,46 @@
     <link rel="stylesheet" href="css_stylesheets/partner_slider_stylesheet.css">
     <link rel="stylesheet" href="css_stylesheets/what_we_do_stylesheet.css">
     <link
-      rel="icon"
-      type="image/png"
-      href="Images/Sticker_Logo-removebg-preview.png"
-    />
+      rel="icon"type="image/png" href="Images/Sticker_Logo-removebg-preview.png"/>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://uccivsoc.com/#organization",
+          "name": "UC Civil & Environmental Engineering Society",
+          "url": "https://uccivsoc.com/",
+          "logo": "https://uccivsoc.com/Images/Sticker_Logo-removebg-preview.png",
+          "sameAs": [
+            "https://www.instagram.com/uccivsoc/",
+            "https://www.linkedin.com/company/uccivsoc/",
+            "mailto:civsocuc@gmail.com"
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "email": "civsocuc@gmail.com",
+              "contactType": "customer service"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "url": "https://uccivsoc.com/",
+          "name": "UC Civil & Environmental Engineering Society",
+          "publisher": {
+            "@id": "https://uccivsoc.com/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://uccivsoc.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <header id="Home">
