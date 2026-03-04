@@ -214,6 +214,21 @@
       margin-bottom: 100px;
   }
 
+    /* Make hero buttons stack vertically on small screens */
+    .hero-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+    }
+
+    .hero-btn {
+      width: 100%;
+      max-width: 360px; /* keep them from becoming too wide on larger phones */
+      height: 48px; /* slightly taller for touch targets */
+      border-radius: 4px;
+    }
+
   }
   
 
