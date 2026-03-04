@@ -14,33 +14,3 @@
 .exec-row img:hover { transform: scale(1.05); }
 .exec-row .role { font-size: clamp(0.8em,2.5vw,1.2em); font-weight:700; color:white; text-align:center; word-wrap:break-word; }
 .exec-row .name { font-size: clamp(0.8em,2vw,1em); color:#fff; font-weight:bold; text-align:center; word-wrap:break-word; }
-
-/* Responsive: ensure officer rows keep at least two columns and prevent container from shrinking below that width */
-@media (max-width: 800px) {
-  /* Use a two-column grid for officer rows so at least two columns remain side-by-side */
-  .exec-row.officers .figure-row,
-  .exec-row .figure-row.officers,
-  .exec-row .figure-row .officers,
-  .officers {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-    gap: 12px;
-    align-items: center;
-    justify-content: center;
-    /* Keep the grid at its intrinsic size but never smaller than two columns */
-    width: min-content;
-    min-width: calc(2 * 220px + 12px);
-    margin: 0 auto; /* center the grid in its parent */
-    box-sizing: border-box;
-  }
-
-  /* Make figures fill the grid cells */
-  .exec-row .figure-row figure,
-  .officers figure {
-    width: 100%;
-    max-width: none;
-    box-sizing: border-box;
-  }
-
-  /* On very small viewports we still allow scrolling rather than collapsing a column below the minimum size */
-}
