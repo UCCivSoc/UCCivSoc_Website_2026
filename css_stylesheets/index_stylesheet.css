@@ -1,277 +1,287 @@
 /* ================= PRELOADER ================= */
 .loader-wrapper {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--accent-3);
-  }
-  .loader {
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    transform-origin: center;
-    animation: rollIn 1.5s cubic-bezier(.25,1.25,.5,1) forwards;
-  }
-  .loader img { width: auto; max-height: 100%; border-radius: 50%; display: block; padding: 2px; }
-  
-  /* Dismiss (X) Button */
-  .loader-dismiss {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 10000;
-    width: 36px;
-    height: 36px;
-    color: white;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .3s ease;
-  }
-  
-  .loader-dismiss.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* ================= WELCOME / HERO ================= */
-  .welcome-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    position: relative;
-    overflow: hidden;
-    background: var(--accent-3);
-  }
-  .welcome-section .carousel {
-    width: 100%;
-    height: 60vh;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-  }
-  .welcome-section .carousel > ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    height: 100%;
-    display: flex;
-    transition: transform .8s ease-in-out;
-    will-change: transform;
-  }
-  .welcome-section .slide { flex: 0 0 100%; height: 100%; }
-  .welcome-section .slide > img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  
-  .welcome-title {
-    font-size: clamp(1rem, 10vw, 3rem);
-    letter-spacing: clamp(0.2rem, 1vw, 2rem);
-    transform: scaleY(0.8);
-    text-transform: uppercase;
-    text-align: center;
-    word-break: break-word;
-    max-width: 1000px;
-    color: white;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    margin-top: 40px;
-  }
-  .counter-container {
-    color: white;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    margin: 0 0 150px 0;
-  }
-  .counter-container h2 {
-    letter-spacing: 0.4rem;
-  }
-
-  /* nav arrows (prev/next) */
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,166,249,0.15);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: white;
-    font-size: 2rem;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    border-radius: 2px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    z-index: 10;
-    transition: background-color .2s ease, transform .15s ease;
-  }
-  .prev { left: 20px; }
-  .next { right: 20px; }
-  .prev:hover, .next:hover { background-color: rgba(60,117,184,0.8); }
-  
-  .city-skyline {
-    position: absolute;
-    bottom: -34px;
-    left: 0;
-    
-    width: 100%; 
-    height: 120px; 
-    background-image: url('../Images/city_longscape-removebg-preview.png'); 
-    background-repeat: repeat-x; 
-    background-position: bottom center; 
-    background-size: contain; 
-    
-    z-index: 10; 
-    pointer-events: none; 
-  }
-  
-.hero-container { /* Add this class to your <div> in the HTML */
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
   display: flex;
-  flex-wrap: wrap;       /* This allows the buttons to wrap to a new line */
-  gap: 20px;             /* This creates exactly 20px of space between them */
-  justify-content: center; /* Keeps them centered horizontally as a group */
-  padding: 20px;         /* Optional: keeps them from hitting screen edges */
+  justify-content: center;
+  align-items: center;
+  background: var(--accent-3);
 }
-/* 1. Base Styles for all Hero Buttons */
+.loader {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  transform-origin: center;
+  animation: rollIn 1.5s cubic-bezier(0.25, 1.25, 0.5, 1) forwards;
+}
+.loader img {
+  width: auto;
+  max-height: 100%;
+  border-radius: 50%;
+  display: block;
+  padding: 2px;
+}
+
+/* Dismiss (X) Button */
+.loader-dismiss {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  width: 36px;
+  height: 36px;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.loader-dismiss.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================= WELCOME / HERO SECTION ================= */
+.welcome-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 40px 0; /* Padding provides breathing room at top/bottom */
+  box-sizing: border-box;
+}
+
+/* 1. BACKGROUND LAYER */
+.welcome-section .carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(60, 117, 184, 0.6);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.welcome-section .carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  transition: transform 2.5s ease-in-out;
+  will-change: transform;
+}
+
+.welcome-section .slide { flex: 0 0 100%; height: 100%; width: 100%; }
+.welcome-section .slide > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* 2. FOREGROUND LAYER (ALIGNED) */
+.welcome-title {
+  position: relative;
+  z-index: 10;
+  color: white;
+  text-align: center;
+  font-size: clamp(1rem, 10vw, 3rem);
+  letter-spacing: clamp(0.2rem, 1vw, 2rem);
+  transform: scaleY(0.8);
+  text-transform: uppercase;
+  word-break: break-word;
+  max-width: 1000px;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+  
+  /* Pushes title to vertical center */
+  margin-top: auto; 
+  margin-bottom: auto; 
+}
+
+.counter-container {
+  position: relative;
+  z-index: 10;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  
+  /* Pushes this container and everything below it to the bottom */
+  margin-top: auto; 
+  margin-bottom: 1.5rem;
+}
+
+.counter-container h2 {
+  letter-spacing: 0.4rem;
+  margin: 0;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px; /* Space from very bottom of section */
+}
+
+/* 3. BUTTONS */
 .hero-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  
-  z-index: 20;
   width: 160px;
   height: 40px;
   border-radius: 2px;
-  box-sizing: border-box; /* Keeps both buttons the same height */
-  
+  box-sizing: border-box;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 1.1rem;
-  
-  /* Default Primary Style */
-  background-color: var(--accent-1); 
+  background-color: var(--accent-1);
   color: white;
-  border: 2px solid var(--accent-1); /* Border matches bg for size consistency */
-  
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  border: 2px solid var(--accent-1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-
-
-/* 3. The "Ghost" Style (Applied only to the second button) */
 .hero-btn:nth-child(2) {
   background-color: transparent;
   border: 2px solid white;
   color: white;
-  box-shadow: none; /* Ghost buttons usually look better without heavy shadows */
+  box-shadow: none;
 }
 
-/* 4. Hover Effect for the Ghost Button */
 .hero-btn:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
   background-color: white;
-  border: 2px solid white;
-  color: var(--accent-1); /* Text flips to your accent color */
-  filter: none; /* Disables the brightness filter from the base hover */
+  color: var(--accent-1);
 }
 
-  @media (max-width: 800px) {
-    .welcome-title {
-      position: relative;
-      color: transparent;
-      text-shadow: none;
-      margin-top: 0px;
-    }
-  
-    .welcome-title::before {
-      content: attr(data-short);
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 6rem;
-      letter-spacing: 0.2rem;
-      text-transform: uppercase;
-      color: white;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-      white-space: nowrap;
-    }
-  
-    .counter-container {
-      margin-bottom: 100px;
+/* 4. NAVIGATION ARROWS */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 166, 249, 0.15);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 20;             /* Topmost layer for clickability */
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover { 
+  background-color: rgba(60, 117, 184, 0.8); 
+}
+
+/* 5. RESPONSIVE MOBILE OVERRIDES */
+@media (max-width: 800px) {
+  .welcome-title {
+    color: transparent;
+    text-shadow: none;
   }
 
-    /* Make hero buttons stack vertically on small screens */
-    .hero-container {
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      padding: 12px;
-    }
-
-    .hero-btn {
-      width: 100%;
-      max-width: 360px; /* keep them from becoming too wide on larger phones */
-      height: 48px; /* slightly taller for touch targets */
-      border-radius: 4px;
-    }
-
+  .welcome-title::before {
+    content: attr(data-short);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
   }
-  
 
-  
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .hero-btn {
+    width: calc(100% - 40px); 
+    max-width: 280px; /* Increased slightly for better mobile appearance */
+    height: 52px;
+    white-space: nowrap;
+  }
+}
 
 /* ================= SPONSORS SECTION ================= */
 .sponsors {
-  position: relative; 
-  padding: 60px 20px; 
-  color: #ffffff; 
-  background-size: cover; 
+  position: relative;
+  padding: 60px 20px;
+  color: #ffffff;
+  background-size: cover;
   background-position: center;
 }
 
-.sponsors::before { 
-  content: ""; 
-  position: absolute; 
-  inset: 0; 
-  background: rgba(60,117,184,0.75); 
-  z-index: 0; 
+.sponsors::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(60, 117, 184, 0.75);
+  z-index: 0;
 }
 
-.sponsors .content-row { 
-  display: flex; 
-  gap: 40px; 
-  align-items: center; 
-  position: relative; 
-  z-index: 1; 
+.sponsors .content-row {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .sponsors .sponsor-logo,
-.sponsors .text-content { 
-  flex: 1 1 0; 
+.sponsors .text-content {
+  flex: 1 1 0;
   width: 50%;
 }
 
-.sponsors .text-content { 
-  color: #ffffff; 
-  font-size: 1.1em; 
-  line-height: 1.6; 
-  text-align: left; 
+.sponsors .text-content {
+  color: #ffffff;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: left;
 }
 
 .sponsors .text-content h2 {
@@ -281,40 +291,42 @@
 
 /* --- LOGO GRID LOGIC --- */
 
-.logo-parent { 
-  display: flex; 
-  flex-direction: column; 
+.logo-parent {
+  display: flex;
+  flex-direction: column;
   gap: 50px; /* Space between the rows of containers */
-  padding: 10px; 
-  width: 100%; 
+  padding: 10px;
+  width: 100%;
 }
 
-.logo-container { 
-  display: grid; 
+.logo-container {
+  display: grid;
   /* This forces exactly two columns of equal width */
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 15px; 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
   width: 100%;
 }
 
 /* Special Case: If a container has 3 items, make the 3rd one span both columns or stay in grid */
 /* If you prefer the 3rd item to just start a new row of 2, the grid handles that automatically */
 
-.sponser-logo-box { 
-  aspect-ratio: 2 / 1; 
-  width: 100%; 
-  border-radius: 4px; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  background-color: #f5f5f5; 
-  transition: transform .28s ease, box-shadow .28s ease; 
+.sponser-logo-box {
+  aspect-ratio: 2 / 1;
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
 }
 
-.sponser-logo-box img { 
-  width: 80%; 
-  height: 80%; 
-  object-fit: contain; 
+.sponser-logo-box img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
 
 .sponsors .nav-exec ul {
@@ -328,14 +340,14 @@
 /* Media Queries */
 @media (max-width: 1200px) {
   /* Stack the row into a column */
-  .sponsors .content-row { 
-    flex-direction: column; 
-    gap: 40px; 
+  .sponsors .content-row {
+    flex-direction: column;
+    gap: 40px;
   }
 
   /* Make text full width and centered */
-  .sponsors .text-content { 
-    width: 100%; 
+  .sponsors .text-content {
+    width: 100%;
     text-align: center;
     flex: none;
     max-width: 500px;
@@ -349,11 +361,11 @@
   }
 
   /* Constraint on the logo section width */
-  .sponsors .sponsor-logo { 
-    width: 100%; 
+  .sponsors .sponsor-logo {
+    width: 100%;
     max-width: 500px; /* Limits the grid width so boxes aren't huge */
-    margin: 0 auto;  /* Centers the 500px block */
-    flex: none; 
+    margin: 0 auto; /* Centers the 500px block */
+    flex: none;
   }
 }
 
@@ -362,7 +374,7 @@
   .logo-container {
     gap: 10px; /* Tighter spacing for very small screens */
   }
-  
+
   .sponsors {
     padding: 40px 15px; /* Slightly less padding on small phones */
   }

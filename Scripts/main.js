@@ -20,9 +20,9 @@ buttons.forEach(button => {
   });
 });
 
-// Auto-scroll every 4 seconds
+// Auto-scroll every 8 seconds
 function startAutoScroll() {
-  autoScrollInterval = setInterval(() => moveSlide(1), 4000);
+  autoScrollInterval = setInterval(() => moveSlide(1), 8000);
 }
 
 // Restart the interval (useful after clicks)
