@@ -1,40 +1,91 @@
-/* ================= PARTNERS PAGE (PANE GRID) ================= */
-.sponsor-wrapper { display:flex; justify-content:center; }
+/* ================= PARTNERS PAGE (HORIZONTAL ROW) ================= */
+.tier-section {
+  max-width: 900px; /* Slightly wider to accommodate side-by-side */
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.tier-title {
+  font-size: 2rem;
+  color: #3c75b8;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
 .sponsor-pane-container {
-  display:flex; flex-wrap:wrap; gap:20px; padding:20px;
-  max-width: 680px; margin: 20px auto; justify-content:flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Space between each partner row */
 }
+
 .sponsor-pane {
-  width:200px; height:300px; background:#f5f5f5; border-radius:6px; display:flex; flex-direction:column;
-  justify-content:flex-start; align-items:center; padding:20px; box-shadow:0 6px 18px rgba(0,0,0,0.06); transition: transform .28s ease, box-shadow .28s ease;
+  display: flex;
+  flex-direction: row; /* Desktop: Side-by-side */
+  align-items: center; /* Center logo vertically relative to text */
+  gap: 30px;
+  width: 100%;
 }
-.sponsor-pane:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
 
-/* ================= IMAGE CONTAINER ================= */
+/* ================= IMAGE LEFT ================= */
 .sponser-img-container {
-  height:100px; display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:20px;
+  flex: 0 0 200px; /* Fixed width for logo area so text aligns */
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .sponser-img-container img {
-  max-height:100%; max-width:100%; object-fit:contain; display:block;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
-.pane-content { width:100%; display:flex; flex-direction:column; align-items:flex-start; flex-grow:1; }
-.pane-content h3 { font-size:1.25rem; margin:0 0 10px 0; letter-spacing:0.02rem; }
-.pane-content p { font-size:0.9rem; margin:0 0 12px 0; color:#333; }
-
-.nav-partners ul { display:flex; gap:10px; list-style:none; padding:0; margin:0; }
-.nav-partners a {
-  display:inline-flex; align-items:center; justify-content:center; color:white; text-decoration:none; text-transform:uppercase;
-  background: rgba(60,117,184); font-weight:700; font-size:0.8rem; padding:6px 10px; border-radius:4px; text-shadow:1px 1px 3px rgba(0,0,0,0.2);
+/* ================= CONTENT RIGHT ================= */
+.pane-content {
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Keeps text and button left-aligned */
+  text-align: left;
 }
-.nav-partners a:hover { background-color: rgba(120,170,60,0.9); }
 
+.pane-content h3 {
+  font-size: 1.4rem;
+  margin: 0 0 8px 0;
+  color: #222;
+}
+
+.pane-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ================= MOBILE / NARROW MODE ================= */
 @media (max-width: 680px) {
-  .sponsor-pane-container { max-width: 530px; }
-  .sponsor-pane { width:150px; height:225px; padding:12px; }
-  .sponser-img-container { height:60px; margin-bottom:10px; }
-  .sponser-img-container img { max-height:100%; }
-  .pane-content h3 { font-size:1rem; }
-  .pane-content p { font-size:0.75rem; }
-  .nav-partners a { font-size:0.6rem; padding:5px 8px; }
+  .sponsor-pane {
+    flex-direction: column; /* Stack vertically on small screens */
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .sponser-img-container {
+    flex: 0 0 auto; /* Remove fixed width on mobile */
+    height: 80px;
+    width: 100%;
+    justify-content: flex-start; /* Logo stays left on mobile */
+  }
+
+  .tier-title {
+    font-size: 1.5rem;
+  }
+
+  .pane-content h3 {
+    font-size: 1.2rem;
+  }
 }
