@@ -22,21 +22,28 @@
   gap: 50px;
 }
 
-/* Outer pane is now a column — top row + button stacked */
+/* Outer pane: column layout — top row + button stacked */
+/* isolation: isolate ensures z-index values inside each pane
+   are scoped to that pane only — prevents images from adjacent
+   panes bleeding over the button above them */
 .sponsor-pane {
+  position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 100%;
 }
 
-/* Top row: logo left, text right — side by side */
+/* Top row: logo left, text right */
 .sponsor-pane-top {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 30px;
   width: 100%;
+  position: relative;
+  z-index: 0;
 }
 
 /* ================= IMAGE LEFT ================= */
@@ -46,12 +53,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 0;
 }
 
 .sponser-img-container img {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 0;
 }
 
 /* ================= CONTENT RIGHT ================= */
@@ -76,18 +88,60 @@
   margin: 0;
 }
 
-/* ================= BUTTON BELOW ================= */
-.sponsor-pane > .nav-exec {
-  margin: 0;
+/* ================= PARTNER LINK BUTTON ================= */
+/* Fully standalone — no inheritance from nav/header/button rules.
+   position: relative + z-index: 1 ensures it always renders
+   above the image containers within its own pane. */
+.partner-link-btn {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #3c75b8;
+  text-decoration: none !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18rem;
+  text-transform: uppercase;
+  background: none;
+  border: none;
   padding: 0;
+  margin: 0;
+  box-shadow: none;
+  text-shadow: none;
+  cursor: pointer;
+  animation: partnerHintPulse 2.5s ease-in-out infinite;
 }
 
-.sponsor-pane > .nav-exec ul {
-  display: flex;
-  justify-content: flex-start;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.partner-link-btn,
+.partner-link-btn:visited,
+.partner-link-btn:focus {
+  text-decoration: none !important;
+  color: #3c75b8;
+}
+
+.partner-link-btn::after {
+  content: "→";
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.partner-link-btn:hover {
+  color: rgba(120, 170, 60, 0.9) !important;
+  text-decoration: none !important;
+  animation: none;
+  opacity: 1;
+}
+
+.partner-link-btn:hover::after {
+  transform: translateX(5px);
+}
+
+@keyframes partnerHintPulse {
+  0%, 100% { opacity: 0.65; }
+  50%       { opacity: 1; }
 }
 
 /* ================= MOBILE ================= */
@@ -105,14 +159,37 @@
     justify-content: flex-start;
   }
 
+  .sponser-img-container img {
+    max-height: 80px;
+    max-width: 160px;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    z-index: 0;
+  }
+
   .sponsor-pane {
     gap: 14px;
-    /* Ensures clear separation from next pane */
-    padding-bottom: 6px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .sponsor-pane-container > .sponsor-pane:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .pane-content p {
+    overflow: visible;
+    white-space: normal;
+    word-break: normal;
+    hyphens: none;
+    text-align: left;
   }
 
   .tier-title {
     font-size: 1.5rem;
+    margin-top: 60px;
   }
 
   .pane-content h3 {

@@ -9,80 +9,15 @@
     <link rel="stylesheet" href="css_stylesheets/what_we_do_stylesheet.css" />
     <link rel="stylesheet" href="css_stylesheets/mahi_stylesheet.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "https://uccivsoc.com/#organization",
-            "name": "UC Civil & Environmental Engineering Society",
-            "url": "https://uccivsoc.com/",
-            "logo": "https://uccivsoc.com/Images/Sticker_Logo-removebg-preview.png"
-          },
-          {
-            "@type": "WebPage",
-            "url": "https://uccivsoc.com/events.html",
-            "name": "UC Civil & Environmental Engineering Society - Events",
-            "publisher": { "@id": "https://uccivsoc.com/#organization" }
-          },
-          {
-            "@type": "Event",
-            "name": "Coffee Chats",
-            "description": "Our Coffee Chat events give students the chance to meet our partners and their teams in a relaxed setting.",
-            "url": "https://uccivsoc.com/events.html#section-1",
-            "image": "https://uccivsoc.com/Images/IssacCoffeeChat.jpg",
-            "organizer": { "@id": "https://uccivsoc.com/#organization" }
-          },
-          {
-            "@type": "Event",
-            "name": "Spotlights",
-            "description": "Spotlights give students the chance to meet and understand what industry professionals actually do.",
-            "url": "https://uccivsoc.com/events.html#section-2",
-            "image": "https://uccivsoc.com/Images/Spotlight3.jpg",
-            "organizer": { "@id": "https://uccivsoc.com/#organization" }
-          },
-          {
-            "@type": "Event",
-            "name": "Quiz Night",
-            "description": "Annual Quiz Night: team up with friends for a night of fun and competition.",
-            "url": "https://uccivsoc.com/events.html#section-3",
-            "image": "https://uccivsoc.com/Images/Quiznight1.jpeg",
-            "organizer": { "@id": "https://uccivsoc.com/#organization" }
-          },
-          {
-            "@type": "Event",
-            "name": "Ball",
-            "description": "A night full of music, fun, and networking—first held in 2025.",
-            "url": "https://uccivsoc.com/events.html#section-4",
-            "image": "https://uccivsoc.com/Images/P1020662.jpg",
-            "organizer": { "@id": "https://uccivsoc.com/#organization" }
-          },
-          {
-            "@type": "Event",
-            "name": "BYO",
-            "description": "BYO events to help students connect with peers and cohorts.",
-            "url": "https://uccivsoc.com/events.html#section-5",
-            "image": "https://uccivsoc.com/Images/byo1.jpeg",
-            "organizer": { "@id": "https://uccivsoc.com/#organization" }
-          }
-        ]
-      }
-    </script>
   </head>
   <body>
     <header id="Home">
       <div class="logo">
         <a href="index.html">
-          <img
-            src="Images/Screenshot 2025-10-16 at 07.14.19.jpg"
-            alt="Site Logo"
-          />
+          <img src="Images/Screenshot 2025-10-16 at 07.14.19.jpg" alt="Site Logo" />
         </a>
       </div>
-
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-
       <nav class="nav-links">
         <ul>
           <li><a href="index.html#Home">Home</a></li>
@@ -90,199 +25,21 @@
           <li><a href="mahi.html">Mahi</a></li>
           <li><a href="partners.html">Partners</a></li>
           <li><a href="exec.html">Exec</a></li>
-          <li>
-            <a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register"
-              >REGISTER</a
-            >
-          </li>
+          <li><a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register">REGISTER</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <!-- ===== PAGE HERO ===== -->
       <div class="event-heading">
-        <img src="Images/clubday1_26.jpg" alt="Club Day" class="header-bg" />
+        <img src="Images/clubday1_26.jpg" alt="CivSoc Club Day 2026" class="header-bg" width="1200" height="400" />
         <div class="overlay"></div>
         <div class="content">
           <h1>Our Events</h1>
         </div>
       </div>
-
-      <section id="what-we-do">
-        <div class="wwd-grid">
-          <a
-            href="javascript:void(0)"
-            onclick="revealCategory('industry')"
-            class="wwd-card"
-          >
-            <figure>
-              <img src="Images/IssacCoffeeChat.jpg" alt="Industry" />
-              <figcaption>Industry</figcaption>
-            </figure>
-          </a>
-
-          <a
-            href="javascript:void(0)"
-            onclick="revealCategory('academic')"
-            class="wwd-card"
-          >
-            <figure>
-              <img src="Images/Industrynight.jpg" alt="Academic" />
-              <figcaption>Academic</figcaption>
-            </figure>
-          </a>
-
-          <a
-            href="javascript:void(0)"
-            onclick="revealCategory('social')"
-            class="wwd-card"
-          >
-            <figure>
-              <img src="Images/byo1.jpeg" alt="Social" />
-              <figcaption>Social</figcaption>
-            </figure>
-          </a>
-        </div>
-      </section>
-
-      <section
-        id="industry-header"
-        class="main industry toggle-section"
-        data-category="industry"
-        style="
-          background-image: url(&quot;Images/cq5dam.web.1280.1280.jpeg&quot;);
-        "
-      >
-        <h1>Industry</h1>
-        <p>Welcome to our industry events page!</p>
-      </section>
-
-      <section
-        id="section-1"
-        class="events toggle-section"
-        data-category="industry"
-        style="background-image: url(&quot;Images/IssacCoffeeChat.jpg&quot;)"
-      >
-        <h2>Coffee Chats</h2>
-        <p>
-          Our Coffee Chat events give students the chance to meet our partners
-          and their teams in a relaxed setting. It’s the perfect opportunity for
-          one-on-one conversations with industry professionals, allowing you to
-          ask questions, gain insights, and build meaningful connections.
-        </p>
-        <div class="images-container">
-          <img src="Images/IssacCoffeeChat.jpg" alt="Coffee Chat 1" />
-          <img src="Images/Coffechats2.jpg" alt="Coffee Chat 2" />
-          <img src="Images/Isaac_cc_26.jpeg" alt="Coffee Chat 3" />
-        </div>
-      </section>
-
-      <section
-        id="section-2"
-        class="events toggle-section"
-        data-category="industry"
-        style="background-image: url(&quot;Images/Spotlight3.jpg&quot;)"
-      >
-        <h2>Spotlights</h2>
-        <p>
-          Our Spotlights give students the chance to meet and understand what
-          industry professionals actually do. It’s a fantastic opportunity to
-          connect, ask questions, and learn more about a variety of disciplines.
-          We also run targeted Spotlights focusing on specific areas, such as
-          water and structural engineering.
-        </p>
-        <div class="images-container">
-          <img src="Images/Spotlight2.jpg" alt="Spotlight 1" />
-          <img src="Images/Spotlight3.jpg" alt="Spotlight 2" />
-          <img src="Images/Spotlight4.jpg" alt="Spotlight 3" />
-        </div>
-      </section>
-
-      <section
-        id="social-header"
-        class="main toggle-section"
-        data-category="social"
-        style="background-image: url(&quot;Images/P1020662.jpg&quot;)"
-      >
-        <h1>Social</h1>
-        <p>Welcome to our social events page!</p>
-      </section>
-
-      <section
-        id="section-3"
-        class="events toggle-section"
-        data-category="social"
-        style="background-image: url(&quot;Images/Quiznight.jpeg&quot;)"
-      >
-        <h2>Quiz Night</h2>
-        <p>
-          Every year, we host our Annual Quiz Night in collaboration with our
-          primary partners. It’s a chance to team up with friends, show off your
-          creativity with fun dress-ups, and enjoy a night of laughter and
-          friendly competition.
-        </p>
-        <div class="images-container">
-          <img src="Images/Quiznight1.jpeg" alt="Quiz Night 1" />
-          <img src="Images/Quiznight2.jpg" alt="Quiz Night 2" />
-          <img src="Images/Quiznight3.jpg" alt="Quiz Night 3" />
-        </div>
-      </section>
-
-      <section
-        id="section-4"
-        class="events toggle-section"
-        data-category="social"
-        style="background-image: url(&quot;Images/P1020662.jpg&quot;)"
-      >
-        <h2>Ball</h2>
-        <p>
-          The Ball is a night full of music, fun, drinks, and a chance to mingle
-          with people from across all disciplines. First held in 2025, it was a
-          huge success and we’re excited to bring it back in 2026.
-        </p>
-        <div class="images-container">
-          <img src="Images/P1020431.jpg" alt="Ball 1" />
-          <img src="Images/P1020455.jpg" alt="Ball 2" />
-          <img src="Images/P1020800.jpg" alt="Ball 3" />
-        </div>
-      </section>
-
-      <section
-        id="section-5"
-        class="events toggle-section"
-        data-category="social"
-        style="background-image: url(&quot;Images/byo4.jpeg&quot;)"
-      >
-        <h2>BYO</h2>
-        <p>
-          We plan to host multiple BYO events this year to help students connect
-          with their peers and other cohorts. In 2026, we had a great experience
-          at Zyka, enjoying delicious curries and fun games.
-        </p>
-        <div class="images-container">
-          <img src="Images/byo1.jpeg" alt="BYO 1" />
-          <img src="Images/byo2.jpeg" alt="BYO 2" />
-          <img src="Images/byo3.jpeg" alt="BYO 3" />
-          <img src="Images/welcomebyo.jpg" alt="BYO 4" />
-        </div>
-      </section>
-
-      <section
-        id="academic"
-        class="main toggle-section"
-        data-category="academic"
-        style="
-          background-image: url(&quot;Images/cq5dam.web.1280.1280.jpeg&quot;);
-        "
-      >
-        <h1>Academic</h1>
-        <p>Welcome to our academic events page!</p>
-        <p>
-          Currently it’s a bit empty, but in 2026, we’re excited to bring new
-          academic support initiatives to UC students.
-        </p>
-      </section>
-
+      <!-- ===== MAHI SECTION ===== -->
       <section class="mahi" id="mahi">
         <div class="content-row">
           <div class="text-content">
@@ -296,52 +53,150 @@
               networking opportunities, we offer students a broader perspective
               on the engineering landscape, helping them navigate their future
               career paths. From academic support to social connection, we are
-              committed to seeing our members thrive throughout their time at
-              UC.
+              committed to seeing our members thrive throughout their time at UC.
             </p>
           </div>
-          <img class="fade-scroll" src="Images/P1020431.jpg" alt="Civil engineering project" />
+          <img class="fade-scroll" src="Images/P1020431.jpg" alt="CivSoc members at the Ball" width="600" height="400" loading="lazy" />
         </div>
       </section>
+      
+      <!-- ===== INDUSTRY SECTION ===== -->
+      <div class="category-block">
+
+        <section
+          class="category-banner"
+          style="background-image: url('Images/cq5dam.web.1280.1280.jpeg')"
+        >
+          <div class="category-banner-overlay"></div>
+          <div class="category-banner-content">
+            <span class="category-label">01</span>
+            <h2>Industry</h2>
+            <p>Connect with professionals and explore your future career path.</p>
+          </div>
+        </section>
+
+        <div class="horizontal-track-wrapper">
+          <div class="horizontal-track-sticky">
+            <div class="scroll-hint">Scroll to explore</div>
+            <div class="horizontal-track" id="industry-track">
+
+              <div class="h-event-card" style="background-image: url('Images/IssacCoffeeChat.jpg')" id="section-1">
+                <div class="h-event-card-content">
+                  <h2>Coffee Chats</h2>
+                  <p>Meet our partners one-on-one in a relaxed setting. Ask questions, gain insights, and build meaningful connections with industry professionals.</p>
+                </div>
+              </div>
+
+              <div class="h-event-card" style="background-image: url('Images/Spotlight3.jpg')" id="section-2">
+                <div class="h-event-card-content">
+                  <h2>Spotlights</h2>
+                  <p>Meet industry professionals and understand what they actually do. Targeted sessions covering water, structural, and environmental engineering disciplines.</p>
+                </div>
+              </div>
+
+              <div class="h-event-card" style="background-image: url('Images/Industrynight.jpg')" id="section-industry-3">
+                <div class="h-event-card-content">
+                  <h2>Industry Night</h2>
+                  <p>A flagship evening where students meet multiple firms under one roof — bring your questions and leave with contacts.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SOCIAL SECTION ===== -->
+      <div class="category-block">
+
+        <section
+          class="category-banner"
+          style="background-image: url('Images/P1020662.jpg')"
+        >
+          <div class="category-banner-overlay"></div>
+          <div class="category-banner-content">
+            <span class="category-label">02</span>
+            <h2>Social</h2>
+            <p>Build friendships and celebrate being part of CivSoc.</p>
+          </div>
+        </section>
+
+        <div class="horizontal-track-wrapper">
+          <div class="horizontal-track-sticky">
+            <div class="scroll-hint">Scroll to explore</div>
+            <div class="horizontal-track" id="social-track">
+
+              <div class="h-event-card" style="background-image: url('Images/Quiznight1.jpeg')" id="section-3">
+                <div class="h-event-card-content">
+                  <h2>Quiz Night</h2>
+                  <p>Team up with friends for our annual Quiz Night. Show off your creativity with fun dress-ups and enjoy a night of laughter and friendly competition.</p>
+                </div>
+              </div>
+
+              <div class="h-event-card" style="background-image: url('Images/P1020662.jpg')" id="section-4">
+                <div class="h-event-card-content">
+                  <h2>Ball</h2>
+                  <p>A night of music, fun, and mingling with students across all disciplines. First held in 2025 to huge success — back again in 2026.</p>
+                </div>
+              </div>
+
+              <div class="h-event-card" style="background-image: url('Images/byo1.jpeg')" id="section-5">
+                <div class="h-event-card-content">
+                  <h2>BYO</h2>
+                  <p>Connect with peers and other cohorts at our BYO events. In 2026 we enjoyed a great night at Zyka with delicious food and fun games.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== ACADEMIC SECTION ===== -->
+      <div class="category-block">
+
+        <section
+          class="category-banner academic-banner"
+          style="background-image: url('Images/cq5dam.web.1280.1280.jpeg')"
+        >
+          <div class="category-banner-overlay"></div>
+          <div class="category-banner-content">
+            <span class="category-label">03</span>
+            <h2>Academic</h2>
+            <p>New academic support initiatives coming to UC students in 2026.</p>
+          </div>
+        </section>
+
+        <div class="academic-placeholder">
+          <div class="placeholder-card">
+            <span class="placeholder-icon">📐</span>
+            <h3>Coming Soon</h3>
+            <p>We're developing exciting new academic support events for 2026. Watch this space!</p>
+          </div>
+        </div>
+
+      </div>
     </main>
 
     <!-- ===== FOOTER ===== -->
     <footer>
       <div class="footer-container">
-        <!-- Logo on the left -->
         <div class="logofoot">
           <img src="Images/Sticker_Logo-removebg-preview.png" alt="Site Logo" />
         </div>
-
-        <!-- Links on the right -->
         <div class="footer-links">
           <ul class="link-column">
             <h3>Socials</h3>
             <li><a href="https://www.instagram.com/uccivsoc/">Instagram</a></li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/uccivsoc/posts/?feedView=all"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://mail.google.com/mail/?view=cm&to=civsocuc@gmail.com"
-                target="_blank"
-                >Email</a
-              >
-            </li>
+            <li><a href="https://www.linkedin.com/company/uccivsoc/posts/?feedView=all">LinkedIn</a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&to=civsocuc@gmail.com" target="_blank">Email</a></li>
           </ul>
           <ul class="link-column">
             <h3>Navigation</h3>
             <li><a href="mahi.html">Mahi</a></li>
             <li><a href="partners.html">Partners</a></li>
             <li><a href="exec.html">Exec</a></li>
-            <li>
-              <a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register"
-                >REGISTER</a
-              >
-            </li>
+            <li><a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register">REGISTER</a></li>
           </ul>
         </div>
         <div class="copyright-statement">
@@ -349,7 +204,39 @@
         </div>
       </div>
     </footer>
+
     <script src="Scripts/main.js"></script>
-    <script src="Scripts/events.js"></script>
+    <script>
+      // Generic horizontal scroller — one instance per track
+      function makeHorizontalScroller(trackId) {
+        const track = document.getElementById(trackId);
+        if (!track) return;
+        const wrapper = track.closest('.horizontal-track-wrapper');
+        if (!wrapper) return;
+
+        function update() {
+          if (window.innerWidth <= 768) {
+            track.style.transform = '';
+            return;
+          }
+          const wrapperTop = wrapper.getBoundingClientRect().top + window.scrollY;
+          const wrapperHeight = wrapper.offsetHeight;
+          const scrollY = window.scrollY;
+          const progress = Math.min(
+            Math.max((scrollY - wrapperTop) / (wrapperHeight - window.innerHeight), 0),
+            1
+          );
+          const maxScroll = track.scrollWidth - window.innerWidth;
+          track.style.transform = `translateX(-${progress * maxScroll}px)`;
+        }
+
+        window.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+      }
+
+      makeHorizontalScroller('industry-track');
+      makeHorizontalScroller('social-track');
+    </script>
   </body>
 </html>

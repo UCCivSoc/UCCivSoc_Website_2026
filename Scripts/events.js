@@ -2,65 +2,43 @@ function revealCategory(categoryName) {
   const allSections = document.querySelectorAll('.toggle-section');
   const targetSections = document.querySelectorAll(`.toggle-section[data-category="${categoryName}"]`);
 
-  // Check if the clicked category is already visible
-  const isAlreadyActive = targetSections.length > 0 && targetSections[0].classList.contains('active');
+  if (targetSections.length === 0) return;
 
-  // 1. Hide everything first
+  // Check if already active (ignore cards inside horizontal track for this check)
+  const firstNonTrack = [...targetSections].find(el => !el.closest('.horizontal-track'));
+  const isAlreadyActive = firstNonTrack && firstNonTrack.classList.contains('active');
+
+  // 1. Hide everything — but never touch cards inside the horizontal track
   allSections.forEach(sec => {
+    if (sec.closest('.horizontal-track')) return;
     sec.classList.remove('active');
     sec.style.display = 'none';
   });
 
-  // 2. If it wasn't active, show all sections in that category
+  // 2. If it wasn't already active, show the target category sections
   if (!isAlreadyActive) {
     targetSections.forEach(sec => {
+      // Skip cards inside the horizontal track — they're always visible
+      if (sec.closest('.horizontal-track')) return;
+
       sec.style.display = 'flex';
-      // Short delay to allow display change to register for animation
       setTimeout(() => {
         sec.classList.add('active');
       }, 10);
     });
 
-    // 3. Smooth scroll to the first revealed section
-    if (targetSections.length > 0) {
-      targetSections[0].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // 3. Scroll to first non-track section
+    if (firstNonTrack) {
+      firstNonTrack.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 }
-// This function runs automatically when the page loads
+
+// On page load, check URL for ?show=category and auto-reveal
 window.addEventListener('DOMContentLoaded', () => {
-    // 1. Get the 'show' parameter from the URL (e.g., ?show=industry)
-    const urlParams = new URLSearchParams(window.location.search);
-    const categoryToOpen = urlParams.get('show');
-
-    // 2. If a category exists in the URL, trigger the reveal
-    if (categoryToOpen) {
-        revealCategory(categoryToOpen);
-    }
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryToOpen = urlParams.get('show');
+  if (categoryToOpen) {
+    revealCategory(categoryToOpen);
+  }
 });
-
-// Your existing function remains mostly the same, 
-// but we add a check to make sure it exists on the current page.
-function revealCategory(categoryName) {
-    const allSections = document.querySelectorAll('.toggle-section');
-    const targetSections = document.querySelectorAll(`.toggle-section[data-category="${categoryName}"]`);
-
-    if (targetSections.length === 0) return; // Exit if sections don't exist on this page
-
-    // Hide everything
-    allSections.forEach(sec => {
-        sec.classList.remove('active');
-        sec.style.display = 'none';
-    });
-
-    // Reveal target group
-    targetSections.forEach(sec => {
-        sec.style.display = 'flex';
-        setTimeout(() => {
-            sec.classList.add('active');
-        }, 10);
-    });
-
-    // Scroll to the content
-    targetSections[0].scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
