@@ -1,59 +1,126 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CivSoc - Mahi Page</title>
+
+    <!-- Primary SEO -->
+    <title>Our Māhi | UC Civil &amp; Environmental Engineering Society</title>
+    <meta name="description" content="Learn about the mission of UC CivSoc — connecting civil engineering students with industry professionals, supporting academic growth, and building community at the University of Canterbury." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="UC Civil &amp; Environmental Engineering Society" />
+    <link rel="canonical" href="https://uccivsoc.com/mahi.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://uccivsoc.com/mahi.html" />
+    <meta property="og:title" content="Our Māhi | UC Civil &amp; Environmental Engineering Society" />
+    <meta property="og:description" content="CivSoc connects UC civil engineering students with industry, supports academic growth, and builds a thriving engineering community in Christchurch." />
+    <meta property="og:image" content="https://uccivsoc.com/Images/Sticker_Logo-removebg-preview.png" />
+    <meta property="og:site_name" content="UCCivSoc" />
+    <meta property="og:locale" content="en_NZ" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Our Māhi | UC Civil &amp; Environmental Engineering Society" />
+    <meta name="twitter:description" content="CivSoc connects UC civil engineering students with industry, supports academic growth, and builds a thriving engineering community." />
+    <meta name="twitter:image" content="https://uccivsoc.com/Images/Sticker_Logo-removebg-preview.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://uccivsoc.com/#organization",
+          "name": "UC Civil & Environmental Engineering Society",
+          "alternateName": "CivSoc",
+          "url": "https://uccivsoc.com/",
+          "foundingDate": "2022",
+          "description": "The UC Civil & Environmental Engineering Society connects civil engineering students at the University of Canterbury with industry professionals and supports their academic and social development.",
+          "logo": "https://uccivsoc.com/Images/Sticker_Logo-removebg-preview.png",
+          "memberOf": {
+            "@type": "Organization",
+            "name": "University of Canterbury Students' Association",
+            "url": "https://ucsa.org.nz/"
+          },
+          "parentOrganization": {
+            "@type": "EducationalOrganization",
+            "name": "University of Canterbury",
+            "url": "https://www.canterbury.ac.nz/"
+          },
+          "sameAs": [
+            "https://www.instagram.com/uccivsoc/",
+            "https://www.linkedin.com/company/uccivsoc/"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://uccivsoc.com/mahi.html",
+          "url": "https://uccivsoc.com/mahi.html",
+          "name": "Our Māhi | UC Civil & Environmental Engineering Society",
+          "description": "The mission and vision of UC CivSoc — bridging the gap between academic study and professional engineering practice.",
+          "isPartOf": { "@id": "https://uccivsoc.com/#website" },
+          "publisher": { "@id": "https://uccivsoc.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="css_stylesheets/overall_styles.css" />
     <link rel="stylesheet" href="css_stylesheets/mahi_stylesheet.css" />
     <link rel="stylesheet" href="css_stylesheets/what_we_do_stylesheet.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="Images/Sticker_Logo-removebg-preview.png"
-    />
+    <link rel="icon" type="image/png" href="Images/Sticker_Logo-removebg-preview.png" />
+
+    <!-- Preload LCP image -->
+    <link rel="preload" as="image" href="Images/2025_new_exec.jpeg" />
   </head>
   <body>
-    <header id="Home">
+    <header>
       <div class="logo">
-        <a href="index.html">
+        <a href="index.html" aria-label="UC Civil &amp; Environmental Engineering Society — home">
           <img
             src="Images/Screenshot 2025-10-16 at 07.14.19.jpg"
-            alt="Site Logo"
+            alt="UC Civil &amp; Environmental Engineering Society logo"
+            width="160"
+            height="60"
+            fetchpriority="high"
           />
         </a>
       </div>
-
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-
-      <nav class="nav-links">
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <nav class="nav-links" id="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html#Home">Home</a></li>
           <li><a href="events.html">Events</a></li>
-          <li><a href="mahi.html">Mahi</a></li>
+          <li><a href="mahi.html" aria-current="page">Mahi</a></li>
           <li><a href="partners.html">Partners</a></li>
           <li><a href="exec.html">Exec</a></li>
-          <li>
-            <a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register"
-              >REGISTER</a
-            >
-          </li>
+          <li><a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register">REGISTER</a></li>
         </ul>
       </nav>
     </header>
-    <main>
+
+    <main id="main-content">
+
       <div class="generic-heading">
         <h1>Our Māhi</h1>
       </div>
-      <section class="mahi" id="mahi">
+
+      <!-- MISSION -->
+      <section class="mahi" id="mahi" aria-labelledby="mahi-heading">
         <div class="content-row">
           <img
             class="fade-scroll"
             src="Images/2025_new_exec.jpeg"
-            alt="Civil engineering project"
+            alt="UC CivSoc 2025 executive team"
+            width="600"
+            height="400"
+            fetchpriority="high"
           />
           <div class="text-content">
-            <h2 class="reveal">Our Māhi</h2>
+            <h2 class="reveal" id="mahi-heading">Our Māhi</h2>
             <p class="reveal-x">
               At the University of Canterbury Civil and Environmental
               Engineering Society we strive to foster a thriving community for
@@ -63,7 +130,7 @@
               engineers to excel both academically and professionally while
               building lasting networks and friendships.
             </p>
-            <nav class="nav-exec">
+            <nav class="nav-exec" aria-label="Meet the team">
               <ul>
                 <li><a href="exec.html">The 2026 Exec Team</a></li>
               </ul>
@@ -71,94 +138,91 @@
           </div>
         </div>
       </section>
+
+      <!-- ABOUT -->
       <section
         class="mahi mahi-alt"
-        id="mahi-vision"
+        id="about"
+        aria-labelledby="about-heading"
         style="background-image: url(Images/cq5dam.web.1280.1280.jpeg)"
       >
         <div class="content-row">
-          <div class="text-content reveal" >
-            <h2>About Us</h2>
+          <div class="text-content reveal">
+            <h2 id="about-heading">About Us</h2>
             <p>
-              The University of Canterbury Civil & Environmental Engineering
+              The University of Canterbury Civil &amp; Environmental Engineering
               Society was officially established in 2022, though we began as the
-              Civil & Natural Engineering Society. Following the department’s
+              Civil &amp; Natural Engineering Society. Following the department's
               modernization and name change, we rebranded to reflect this new
-              identity. Each year, our club continues to grow—hosting more
+              identity. Each year, our club continues to grow — hosting more
               events, expanding our resources, and strengthening our connection
-              between students and industry professionals. We’re excited about
+              between students and industry professionals. We're excited about
               the opportunities ahead and remain committed to supporting our
-              members’ professional and social development.
+              members' professional and social development.
             </p>
           </div>
-          <img class="fade-scroll" src="Images/P1020662.jpg" alt="Vision statement visual" />
+          <img
+            class="fade-scroll"
+            src="Images/P1020662.jpg"
+            alt="CivSoc members at the 2025 Ball"
+            width="600"
+            height="400"
+            loading="lazy"
+          />
         </div>
       </section>
-      <section id="what-we-do">
+
+      <!-- WHAT WE DO -->
+      <section id="what-we-do" aria-labelledby="wwd-heading">
+        <h2 id="wwd-heading" class="sr-only">What We Do</h2>
         <div class="wwd-grid">
-          <a href="events.html?show=industry" class="wwd-card reveal">
+          <a href="events.html#industry" class="wwd-card reveal">
             <figure>
-              <img src="Images/IssacCoffeeChat.jpg" alt="Industry" />
+              <img src="Images/IssacCoffeeChat.jpg" alt="Industry events — Coffee Chats and Spotlights with engineering firms" width="400" height="300" loading="lazy" />
               <figcaption>Industry</figcaption>
             </figure>
           </a>
-
-          <a href="events.html?show=academic" class="wwd-card reveal reveal-delay-1">
+          <a href="events.html#academic" class="wwd-card reveal reveal-delay-1">
             <figure>
-              <img src="Images/Industrynight.jpg" alt="Academic" />
+              <img src="Images/Industrynight.jpg" alt="Academic support events for civil engineering students" width="400" height="300" loading="lazy" />
               <figcaption>Academic</figcaption>
             </figure>
           </a>
-
-          <a href="events.html?show=social" class="wwd-card reveal reveal-delay-2">
+          <a href="events.html#social" class="wwd-card reveal reveal-delay-2">
             <figure>
-              <img src="Images/byo1.jpeg" alt="Social" />
+              <img src="Images/byo1.jpeg" alt="Social events — Quiz Night, Ball, and BYO" width="400" height="300" loading="lazy" />
               <figcaption>Social</figcaption>
             </figure>
           </a>
         </div>
       </section>
+
     </main>
+
     <footer>
       <div class="footer-container">
         <div class="logofoot">
-          <img src="Images/Sticker_Logo-removebg-preview.png" alt="Site Logo" />
+          <img src="Images/Sticker_Logo-removebg-preview.png" alt="UC Civil &amp; Environmental Engineering Society" width="80" height="80" loading="lazy" />
         </div>
         <div class="footer-links">
           <ul class="link-column">
             <h3>Socials</h3>
-            <li><a href="https://www.instagram.com/uccivsoc/">Instagram</a></li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/uccivsoc/posts/?feedView=all"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://mail.google.com/mail/?view=cm&to=civsocuc@gmail.com"
-                target="_blank"
-                >Email</a
-              >
-            </li>
+            <li><a href="https://www.instagram.com/uccivsoc/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/uccivsoc/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&to=civsocuc@gmail.com" target="_blank" rel="noopener noreferrer">Email</a></li>
           </ul>
           <ul class="link-column">
             <h3>Navigation</h3>
             <li><a href="mahi.html">Mahi</a></li>
             <li><a href="partners.html">Partners</a></li>
             <li><a href="exec.html">Exec</a></li>
-            <li>
-              <a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register"
-                >REGISTER</a
-              >
-            </li>
+            <li><a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register">REGISTER</a></li>
           </ul>
         </div>
-        <div class="copyright-statement">
-          © 2026 UC Civil & Environmental Engineering Society
-        </div>
+        <div class="copyright-statement">© 2026 UC Civil &amp; Environmental Engineering Society</div>
       </div>
     </footer>
+
     <script src="Scripts/main.js"></script>
     <script src="Scripts/events.js"></script>
   </body>

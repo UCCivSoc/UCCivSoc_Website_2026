@@ -68,6 +68,18 @@
   overflow: hidden;
 }
 
+.industry-banner {
+  background-image: url('../Images/cq5dam.web.1280.1280.jpeg');
+}
+
+.social-banner {
+  background-image: url('../Images/P1020662.jpg');
+}
+
+.academic-banner {
+  background-image: url('../Images/cq5dam.web.1280.1280.jpeg');
+}
+
 .category-banner-overlay {
   position: absolute;
   inset: 0;

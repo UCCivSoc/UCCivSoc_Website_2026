@@ -1,27 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UC Civil and Environmental Society - Events Page</title>
+
+    <!-- Primary SEO -->
+    <title>Events | UC Civil &amp; Environmental Engineering Society</title>
+    <meta name="description" content="Explore CivSoc's industry, social, and academic events — Coffee Chats, Spotlights, Industry Night, Quiz Night, Ball, and BYO at the University of Canterbury." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="UC Civil &amp; Environmental Engineering Society" />
+    <link rel="canonical" href="https://uccivsoc.com/events.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://uccivsoc.com/events.html" />
+    <meta property="og:title" content="Events | UC Civil &amp; Environmental Engineering Society" />
+    <meta property="og:description" content="Industry networking, social events, and academic support for UC civil engineering students. Coffee Chats, Spotlights, Quiz Night, Ball and more." />
+    <meta property="og:image" content="https://uccivsoc.com/Images/clubday1_26.jpg" />
+    <meta property="og:site_name" content="UCCivSoc" />
+    <meta property="og:locale" content="en_NZ" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Events | UC Civil &amp; Environmental Engineering Society" />
+    <meta name="twitter:description" content="Industry networking, social events, and academic support for UC civil engineering students." />
+    <meta name="twitter:image" content="https://uccivsoc.com/Images/clubday1_26.jpg" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://uccivsoc.com/#organization",
+          "name": "UC Civil & Environmental Engineering Society",
+          "alternateName": "CivSoc",
+          "url": "https://uccivsoc.com/",
+          "logo": "https://uccivsoc.com/Images/Sticker_Logo-removebg-preview.png",
+          "sameAs": [
+            "https://www.instagram.com/uccivsoc/",
+            "https://www.linkedin.com/company/uccivsoc/"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://uccivsoc.com/events.html",
+          "url": "https://uccivsoc.com/events.html",
+          "name": "Events | UC Civil & Environmental Engineering Society",
+          "description": "Industry networking, social, and academic events for UC civil engineering students.",
+          "isPartOf": { "@id": "https://uccivsoc.com/#website" },
+          "publisher": { "@id": "https://uccivsoc.com/#organization" }
+        },
+        {
+          "@type": "Event",
+          "name": "Coffee Chats",
+          "description": "Meet industry partners one-on-one in a relaxed setting. Ask questions, gain insights, and build meaningful connections.",
+          "url": "https://uccivsoc.com/events.html#section-1",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": { "@type": "Place", "name": "University of Canterbury", "address": { "@type": "PostalAddress", "addressLocality": "Christchurch", "addressCountry": "NZ" } },
+          "organizer": { "@id": "https://uccivsoc.com/#organization" }
+        },
+        {
+          "@type": "Event",
+          "name": "Spotlights",
+          "description": "Targeted sessions where students meet industry professionals covering water, structural, and environmental engineering.",
+          "url": "https://uccivsoc.com/events.html#section-2",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": { "@type": "Place", "name": "University of Canterbury", "address": { "@type": "PostalAddress", "addressLocality": "Christchurch", "addressCountry": "NZ" } },
+          "organizer": { "@id": "https://uccivsoc.com/#organization" }
+        },
+        {
+          "@type": "Event",
+          "name": "CV Workshop",
+          "description": "A workshop that brings together industry professionals to share insights on CV writing and job applications. Get your CV reviewed and receive personalized feedback to help you stand out in the job market.",
+          "url": "https://uccivsoc.com/events.html#section-industry-3",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": { "@type": "Place", "name": "University of Canterbury", "address": { "@type": "PostalAddress", "addressLocality": "Christchurch", "addressCountry": "NZ" } },
+          "organizer": { "@id": "https://uccivsoc.com/#organization" }
+        },
+        {
+          "@type": "Event",
+          "name": "Quiz Night",
+          "description": "Annual CivSoc Quiz Night — team up with friends for dress-ups and friendly competition.",
+          "url": "https://uccivsoc.com/events.html#section-3",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "organizer": { "@id": "https://uccivsoc.com/#organization" }
+        },
+        {
+          "@type": "Event",
+          "name": "CivSoc Ball",
+          "description": "A night of music, fun, and mingling with students across all disciplines. First held in 2025.",
+          "url": "https://uccivsoc.com/events.html#section-4",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "organizer": { "@id": "https://uccivsoc.com/#organization" }
+        },
+        {
+          "@type": "Event",
+          "name": "BYO",
+          "description": "Connect with peers and other cohorts at CivSoc BYO events.",
+          "url": "https://uccivsoc.com/events.html#section-5",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "organizer": { "@id": "https://uccivsoc.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="css_stylesheets/overall_styles.css" />
     <link rel="stylesheet" href="css_stylesheets/event_main_stylesheet.css" />
     <link rel="stylesheet" href="css_stylesheets/what_we_do_stylesheet.css" />
     <link rel="stylesheet" href="css_stylesheets/mahi_stylesheet.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" type="image/png" href="Images/Sticker_Logo-removebg-preview.png" />
+
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="Images/clubday1_26.jpg" />
   </head>
   <body>
-    <header id="Home">
+    <header>
       <div class="logo">
-        <a href="index.html">
-          <img src="Images/Screenshot 2025-10-16 at 07.14.19.jpg" alt="Site Logo" />
+        <a href="index.html" aria-label="UC Civil &amp; Environmental Engineering Society — home">
+          <img
+            src="Images/Screenshot 2025-10-16 at 07.14.19.jpg"
+            alt="UC Civil &amp; Environmental Engineering Society logo"
+            width="160"
+            height="60"
+            fetchpriority="high"
+          />
         </a>
       </div>
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-      <nav class="nav-links">
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <nav class="nav-links" id="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html#Home">Home</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
           <li><a href="mahi.html">Mahi</a></li>
           <li><a href="partners.html">Partners</a></li>
           <li><a href="exec.html">Exec</a></li>
@@ -30,20 +142,29 @@
       </nav>
     </header>
 
-    <main>
-      <!-- ===== PAGE HERO ===== -->
+    <main id="main-content">
+
+      <!-- PAGE HERO -->
       <div class="event-heading">
-        <img src="Images/clubday1_26.jpg" alt="CivSoc Club Day 2026" class="header-bg" width="1200" height="400" />
-        <div class="overlay"></div>
+        <img
+          src="Images/clubday1_26.jpg"
+          alt="CivSoc members at Club Day 2026, University of Canterbury"
+          class="header-bg"
+          width="1200"
+          height="400"
+          fetchpriority="high"
+        />
+        <div class="overlay" aria-hidden="true"></div>
         <div class="content">
           <h1>Our Events</h1>
         </div>
       </div>
-      <!-- ===== MAHI SECTION ===== -->
-      <section class="mahi" id="mahi">
+
+      <!-- INTRO -->
+      <section class="mahi" id="mahi" aria-labelledby="plan-heading">
         <div class="content-row">
           <div class="text-content">
-            <h2 class="reveal">Our Plan</h2>
+            <h2 class="reveal" id="plan-heading">Our Plan</h2>
             <p class="reveal-x">
               The UC Civil and Environmental Society is dedicated to bridging
               the gap between academic study and professional practice. Our
@@ -56,140 +177,134 @@
               committed to seeing our members thrive throughout their time at UC.
             </p>
           </div>
-          <img class="fade-scroll" src="Images/P1020431.jpg" alt="CivSoc members at the Ball" width="600" height="400" loading="lazy" />
+          <img
+            class="fade-scroll"
+            src="Images/P1020431.jpg"
+            alt="CivSoc members at the 2025 Ball"
+            width="600"
+            height="400"
+            loading="lazy"
+          />
         </div>
       </section>
-      
-      <!-- ===== INDUSTRY SECTION ===== -->
-      <div class="category-block">
 
-        <section
-          class="category-banner"
-          style="background-image: url('Images/cq5dam.web.1280.1280.jpeg')"
-        >
-          <div class="category-banner-overlay"></div>
+      <!-- INDUSTRY EVENTS -->
+      <div class="category-block" id="industry">
+        <section class="category-banner industry-banner" aria-labelledby="industry-heading">
+          <div class="category-banner-overlay" aria-hidden="true"></div>
           <div class="category-banner-content">
-            <span class="category-label">01</span>
-            <h2>Industry</h2>
+            <span class="category-label" aria-hidden="true">01</span>
+            <h2 id="industry-heading">Industry</h2>
             <p>Connect with professionals and explore your future career path.</p>
           </div>
         </section>
 
-        <div class="horizontal-track-wrapper">
+        <div class="horizontal-track-wrapper" aria-label="Industry events">
           <div class="horizontal-track-sticky">
-            <div class="scroll-hint">Scroll to explore</div>
+            <p class="scroll-hint" aria-hidden="true">Scroll to explore</p>
             <div class="horizontal-track" id="industry-track">
 
-              <div class="h-event-card" style="background-image: url('Images/IssacCoffeeChat.jpg')" id="section-1">
+              <article class="h-event-card" style="background-image: url('Images/IssacCoffeeChat.jpg')" id="section-1">
                 <div class="h-event-card-content">
-                  <h2>Coffee Chats</h2>
+                  <h3>Coffee Chats</h3>
                   <p>Meet our partners one-on-one in a relaxed setting. Ask questions, gain insights, and build meaningful connections with industry professionals.</p>
                 </div>
-              </div>
+              </article>
 
-              <div class="h-event-card" style="background-image: url('Images/Spotlight3.jpg')" id="section-2">
+              <article class="h-event-card" style="background-image: url('Images/Spotlight3.jpg')" id="section-2">
                 <div class="h-event-card-content">
-                  <h2>Spotlights</h2>
+                  <h3>Spotlights</h3>
                   <p>Meet industry professionals and understand what they actually do. Targeted sessions covering water, structural, and environmental engineering disciplines.</p>
                 </div>
-              </div>
+              </article>
 
-              <div class="h-event-card" style="background-image: url('Images/Industrynight.jpg')" id="section-industry-3">
+              <article class="h-event-card" style="background-image: url('Images/Industrynight.jpg')" id="section-industry-3">
                 <div class="h-event-card-content">
-                  <h2>Industry Night</h2>
-                  <p>A flagship evening where students meet multiple firms under one roof — bring your questions and leave with contacts.</p>
+                  <h3>CV Workshop</h3>
+                  <p>A workshop that brings together industry professionals to share insights on CV writing and job applications. Get your CV reviewed and receive personalized feedback to help you stand out in the job market.</p>
                 </div>
-              </div>
+              </article>
 
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ===== SOCIAL SECTION ===== -->
-      <div class="category-block">
-
-        <section
-          class="category-banner"
-          style="background-image: url('Images/P1020662.jpg')"
-        >
-          <div class="category-banner-overlay"></div>
+      <!-- SOCIAL EVENTS -->
+      <div class="category-block" id="social">
+        <section class="category-banner social-banner" aria-labelledby="social-heading">
+          <div class="category-banner-overlay" aria-hidden="true"></div>
           <div class="category-banner-content">
-            <span class="category-label">02</span>
-            <h2>Social</h2>
+            <span class="category-label" aria-hidden="true">02</span>
+            <h2 id="social-heading">Social</h2>
             <p>Build friendships and celebrate being part of CivSoc.</p>
           </div>
         </section>
 
-        <div class="horizontal-track-wrapper">
+        <div class="horizontal-track-wrapper" aria-label="Social events">
           <div class="horizontal-track-sticky">
-            <div class="scroll-hint">Scroll to explore</div>
+            <p class="scroll-hint" aria-hidden="true">Scroll to explore</p>
             <div class="horizontal-track" id="social-track">
 
-              <div class="h-event-card" style="background-image: url('Images/Quiznight1.jpeg')" id="section-3">
+              <article class="h-event-card" style="background-image: url('Images/Quiznight1.jpeg')" id="section-3">
                 <div class="h-event-card-content">
-                  <h2>Quiz Night</h2>
+                  <h3>Quiz Night</h3>
                   <p>Team up with friends for our annual Quiz Night. Show off your creativity with fun dress-ups and enjoy a night of laughter and friendly competition.</p>
                 </div>
-              </div>
+              </article>
 
-              <div class="h-event-card" style="background-image: url('Images/P1020662.jpg')" id="section-4">
+              <article class="h-event-card" style="background-image: url('Images/P1020662.jpg')" id="section-4">
                 <div class="h-event-card-content">
-                  <h2>Ball</h2>
+                  <h3>Ball</h3>
                   <p>A night of music, fun, and mingling with students across all disciplines. First held in 2025 to huge success — back again in 2026.</p>
                 </div>
-              </div>
+              </article>
 
-              <div class="h-event-card" style="background-image: url('Images/byo1.jpeg')" id="section-5">
+              <article class="h-event-card" style="background-image: url('Images/byo1.jpeg')" id="section-5">
                 <div class="h-event-card-content">
-                  <h2>BYO</h2>
+                  <h3>BYO</h3>
                   <p>Connect with peers and other cohorts at our BYO events. In 2026 we enjoyed a great night at Zyka with delicious food and fun games.</p>
                 </div>
-              </div>
+              </article>
 
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ===== ACADEMIC SECTION ===== -->
-      <div class="category-block">
-
-        <section
-          class="category-banner academic-banner"
-          style="background-image: url('Images/cq5dam.web.1280.1280.jpeg')"
-        >
-          <div class="category-banner-overlay"></div>
+      <!-- ACADEMIC EVENTS -->
+      <div class="category-block" id="academic">
+        <section class="category-banner academic-banner" aria-labelledby="academic-heading">
+          <div class="category-banner-overlay" aria-hidden="true"></div>
           <div class="category-banner-content">
-            <span class="category-label">03</span>
-            <h2>Academic</h2>
+            <span class="category-label" aria-hidden="true">03</span>
+            <h2 id="academic-heading">Academic</h2>
             <p>New academic support initiatives coming to UC students in 2026.</p>
           </div>
         </section>
 
         <div class="academic-placeholder">
           <div class="placeholder-card">
-            <span class="placeholder-icon">📐</span>
+            <span class="placeholder-icon" aria-hidden="true">📐</span>
             <h3>Coming Soon</h3>
             <p>We're developing exciting new academic support events for 2026. Watch this space!</p>
           </div>
         </div>
-
       </div>
+
     </main>
 
-    <!-- ===== FOOTER ===== -->
     <footer>
       <div class="footer-container">
         <div class="logofoot">
-          <img src="Images/Sticker_Logo-removebg-preview.png" alt="Site Logo" />
+          <img src="Images/Sticker_Logo-removebg-preview.png" alt="UC Civil &amp; Environmental Engineering Society" width="80" height="80" loading="lazy" />
         </div>
         <div class="footer-links">
           <ul class="link-column">
             <h3>Socials</h3>
-            <li><a href="https://www.instagram.com/uccivsoc/">Instagram</a></li>
-            <li><a href="https://www.linkedin.com/company/uccivsoc/posts/?feedView=all">LinkedIn</a></li>
-            <li><a href="https://mail.google.com/mail/?view=cm&to=civsocuc@gmail.com" target="_blank">Email</a></li>
+            <li><a href="https://www.instagram.com/uccivsoc/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/uccivsoc/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&to=civsocuc@gmail.com" target="_blank" rel="noopener noreferrer">Email</a></li>
           </ul>
           <ul class="link-column">
             <h3>Navigation</h3>
@@ -199,42 +314,27 @@
             <li><a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register">REGISTER</a></li>
           </ul>
         </div>
-        <div class="copyright-statement">
-          © 2026 UC Civil & Environmental Engineering Society
-        </div>
+        <div class="copyright-statement">© 2026 UC Civil &amp; Environmental Engineering Society</div>
       </div>
     </footer>
 
     <script src="Scripts/main.js"></script>
     <script>
-      // Generic horizontal scroller — one instance per track
       function makeHorizontalScroller(trackId) {
         const track = document.getElementById(trackId);
         if (!track) return;
         const wrapper = track.closest('.horizontal-track-wrapper');
         if (!wrapper) return;
-
         function update() {
-          if (window.innerWidth <= 768) {
-            track.style.transform = '';
-            return;
-          }
+          if (window.innerWidth <= 768) { track.style.transform = ''; return; }
           const wrapperTop = wrapper.getBoundingClientRect().top + window.scrollY;
-          const wrapperHeight = wrapper.offsetHeight;
-          const scrollY = window.scrollY;
-          const progress = Math.min(
-            Math.max((scrollY - wrapperTop) / (wrapperHeight - window.innerHeight), 0),
-            1
-          );
-          const maxScroll = track.scrollWidth - window.innerWidth;
-          track.style.transform = `translateX(-${progress * maxScroll}px)`;
+          const progress = Math.min(Math.max((window.scrollY - wrapperTop) / (wrapper.offsetHeight - window.innerHeight), 0), 1);
+          track.style.transform = `translateX(-${progress * (track.scrollWidth - window.innerWidth)}px)`;
         }
-
         window.addEventListener('scroll', update, { passive: true });
         window.addEventListener('resize', update);
         update();
       }
-
       makeHorizontalScroller('industry-track');
       makeHorizontalScroller('social-track');
     </script>

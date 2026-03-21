@@ -270,7 +270,7 @@ header .logo img {
     flex-direction: column;
     width: 100px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    background: a(60, 117, 184, 0.9); /* make parent fully transparent */
+    background: rgba(60, 117, 184, 0.9); /* make parent fully transparent */
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
