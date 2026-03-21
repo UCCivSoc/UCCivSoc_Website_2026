@@ -133,8 +133,9 @@
   margin-bottom: 1.5rem;
 }
 
-.counter-container h2 {
+.counter-container p {
   letter-spacing: 0.4rem;
+  font-size: clamp(0.8rem, 5vw, 1.5rem);
   margin: 0;
 }
 

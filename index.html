@@ -1,22 +1,41 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UCCivSoc</title>
+
+    <!-- Primary SEO -->
+    <title>UC CivSoc</title>
+    <meta name="description" content="The University of Canterbury Civil & Environmental Engineering Society — connecting students with industry professionals, academic support, and a thriving engineering community in Christchurch." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="UC Civil & Environmental Engineering Society" />
+    <link rel="canonical" href="https://uccivsoc.com/" />
+
+    <!-- Open Graph (social sharing) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://uccivsoc.com/" />
+    <meta property="og:title" content="UC Civil & Environmental Engineering Society | CivSoc" />
+    <meta property="og:description" content="Connecting UC civil and environmental engineering students with industry, academics, and community." />
+    <meta property="og:image" content="https://uccivsoc.com/Images/Sticker_Logo-removebg-preview.png" />
+    <meta property="og:site_name" content="UCCivSoc" />
+    <meta property="og:locale" content="en_NZ" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="UC Civil & Environmental Engineering Society | CivSoc" />
+    <meta name="twitter:description" content="Connecting UC civil and environmental engineering students with industry, academics, and community." />
+    <meta name="twitter:image" content="https://uccivsoc.com/Images/Sticker_Logo-removebg-preview.png" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css_stylesheets/overall_styles.css" />
     <link rel="stylesheet" href="css_stylesheets/index_stylesheet.css" />
     <link rel="stylesheet" href="css_stylesheets/mahi_stylesheet.css" />
-    <link
-      rel="stylesheet"
-      href="css_stylesheets/partner_slider_stylesheet.css"
-    />
+    <link rel="stylesheet" href="css_stylesheets/partner_slider_stylesheet.css" />
     <link rel="stylesheet" href="css_stylesheets/what_we_do_stylesheet.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="Images/Sticker_Logo-removebg-preview.png"
-    />
+
+    <link rel="icon" type="image/png" href="Images/Sticker_Logo-removebg-preview.png" />
+
+    <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -25,8 +44,10 @@
             "@type": "Organization",
             "@id": "https://uccivsoc.com/#organization",
             "name": "UC Civil & Environmental Engineering Society",
+            "description": "A student society at the University of Canterbury connecting civil and environmental engineering students with industry professionals, academic support, and community.",
             "url": "https://uccivsoc.com/",
             "logo": "https://uccivsoc.com/Images/Sticker_Logo-removebg-preview.png",
+            "email": "civsocuc@gmail.com",
             "sameAs": [
               "https://www.instagram.com/uccivsoc/",
               "https://www.linkedin.com/company/uccivsoc/",
@@ -56,25 +77,25 @@
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Events",
-                "item": "https://uccivsoc.com/events"
+                "item": "https://uccivsoc.com/events.html"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Meet the Exec",
-                "item": "https://uccivsoc.com/exec"
+                "item": "https://uccivsoc.com/exec.html"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Partners",
-                "item": "https://uccivsoc.com/partners"
+                "item": "https://uccivsoc.com/partners.html"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Our Mahi",
-                "item": "https://uccivsoc.com/mahi"
+                "item": "https://uccivsoc.com/mahi.html"
               }
             ]
           }
@@ -88,14 +109,16 @@
         <a href="index.html">
           <img
             src="Images/Screenshot 2025-10-16 at 07.14.19.jpg"
-            alt="Site Logo"
+            alt="UC Civil & Environmental Engineering Society logo"
+            width="160"
+            height="60"
           />
         </a>
       </div>
 
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <ul>
           <li><a href="index.html#Home">Home</a></li>
           <li><a href="events.html">Events</a></li>
@@ -103,53 +126,55 @@
           <li><a href="partners.html">Partners</a></li>
           <li><a href="exec.html">Exec</a></li>
           <li>
-            <a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register"
-              >REGISTER</a
-            >
+            <a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register">REGISTER</a>
           </li>
         </ul>
       </nav>
     </header>
-    <div class="loader-wrapper">
+
+    <div class="loader-wrapper" role="status" aria-label="Loading">
       <div class="loader">
         <img
           src="Images/Sticker_Logo-removebg-preview.png"
           alt=""
           class="logo-preload"
+          aria-hidden="true"
         />
       </div>
     </div>
+
     <main class="main-container">
-      <section class="welcome-section">
-        <div class="carousel" data-carousel>
-          <button class="prev" data-carousel-button="prev">&#10094;</button>
-          <button class="next" data-carousel-button="next">&#10095;</button>
+      <section class="welcome-section" aria-label="Welcome to CivSoc">
+        <div class="carousel" data-carousel aria-label="CivSoc photo gallery">
+          <button class="prev" data-carousel-button="prev" aria-label="Previous slide">&#10094;</button>
+          <button class="next" data-carousel-button="next" aria-label="Next slide">&#10095;</button>
           <ul data-slides>
             <li class="slide" data-active>
-              <img src="Images/P1020431.jpg" alt="Event 4" />
+              <img src="Images/P1020431.jpg" alt="CivSoc members at a society event" width="1200" height="800" />
             </li>
             <li class="slide">
-              <img src="Images/clubday1_26.jpg" alt="Event 1" />
+              <img src="Images/clubday1_26.jpg" alt="CivSoc at UC Club Day 2026" width="1200" height="800" loading="lazy" />
             </li>
             <li class="slide">
-              <img src="Images/2026fullexec.jpeg" alt="Event 2" />
+              <img src="Images/2026fullexec.jpeg" alt="2026 CivSoc full executive team" width="1200" height="800" loading="lazy" />
             </li>
             <li class="slide">
-              <img src="Images/clubday2_26.jpg" alt="Event 3" />
+              <img src="Images/clubday2_26.jpg" alt="CivSoc members at UC Club Day 2026" width="1200" height="800" loading="lazy" />
             </li>
           </ul>
         </div>
 
         <h1 class="welcome-title" data-short="CivSoc">
-          UC Civil & Environmental Engineering Society
+          UC Civil &amp; Environmental Engineering Society
         </h1>
         <div class="counter-container">
-          <h2>Members: <span class="counter">0</span></h2>
+          <p>Members: <span class="counter">0</span></p>
         </div>
         <div class="hero-container">
           <a
             href="https://linktr.ee/uccivsoc?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAQTKeZleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaezga_epaiHoApQbF0AZuDyQHLBO_LKIZogFd8TF2PA3T-7D0rIcP_R6rkx5A_aem_iFFxqPvrmKYlo0Og7cDC0Q"
             class="hero-btn"
+            rel="noopener"
           >
             Link Tree
           </a>
@@ -159,102 +184,86 @@
         </div>
       </section>
 
-      <section id="what-we-do">
+      <section id="what-we-do" aria-label="What we do">
         <div class="wwd-grid">
-          <a href="events.html?show=industry" class="wwd-card">
+          <a href="events.html?show=industry" class="wwd-card ">
             <figure>
-              <img src="Images/IssacCoffeeChat.jpg" alt="Industry" />
+              <img src="Images/IssacCoffeeChat.jpg" alt="Industry networking event with Isaac Construction" width="400" height="300" loading="lazy" />
               <figcaption>Industry</figcaption>
             </figure>
           </a>
 
           <a href="events.html?show=academic" class="wwd-card">
             <figure>
-              <img src="Images/Industrynight.jpg" alt="Academic" />
+              <img src="Images/Industrynight.jpg" alt="CivSoc academic industry night" width="400" height="300" loading="lazy" />
               <figcaption>Academic</figcaption>
             </figure>
           </a>
 
           <a href="events.html?show=social" class="wwd-card">
             <figure>
-              <img src="Images/byo1.jpeg" alt="Social" />
+              <img src="Images/byo1.jpeg" alt="CivSoc social BYO event" width="400" height="300" loading="lazy" />
               <figcaption>Social</figcaption>
             </figure>
           </a>
         </div>
       </section>
 
-      <div class="slider-wrapper">
-        <div
-          class="slider"
-          style="--width: 100px; --height: 50px; --quantity: 7"
-        >
+      <div class="slider-wrapper" aria-label="Our partners">
+        <div class="slider" style="--width: 100px; --height: 50px; --quantity: 7">
           <div class="item-cont">
             <div class="item" style="--position: 1">
-              <a
-                href="https://www.robertbird.com/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="Images/RobertBird small aspect.png"
-                  alt="Robert Bird Group"
-                />
+              <a href="https://www.robertbird.com/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/RobertBird small aspect.png" alt="Robert Bird Group" width="100" height="50" loading="lazy" />
               </a>
             </div>
-
             <div class="item" style="--position: 2">
-              <a href="https://isaac.co.nz/" target="_blank" rel="noopener">
-                <img src="Images/Isaac copy.png" alt="Isaac Construction" />
+              <a href="https://isaac.co.nz/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/Isaac copy.png" alt="Isaac Construction" width="100" height="50" loading="lazy" />
               </a>
             </div>
-
             <div class="item" style="--position: 3">
-              <a
-                href="https://www.canterbury.ac.nz/study/academic-study/engineering/schools-and-departments-engineering-forestry-product-design/civil-and-natural-resources-engineering-department"
-                target="_blank"
-                rel="noopener"
-              >
-                <img src="Images/UC_logo.png" alt="UC Civil" />
+              <a href="https://www.canterbury.ac.nz/study/academic-study/engineering/schools-and-departments-engineering-forestry-product-design/civil-and-natural-resources-engineering-department" target="_blank" rel="noopener noreferrer">
+                <img src="Images/UC_logo.png" alt="University of Canterbury Civil Engineering" width="100" height="50" loading="lazy" />
               </a>
             </div>
-
             <div class="item" style="--position: 4">
-              <a href="https://ucsa.org.nz/" target="_blank" rel="noopener">
-                <img src="Images/UCSA_logo.png" alt="UCSA" />
+              <a href="https://ucsa.org.nz/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/UCSA_logo.png" alt="University of Canterbury Students' Association (UCSA)" width="100" height="50" loading="lazy" />
               </a>
             </div>
-
             <div class="item" style="--position: 5">
-              <a href="https://www.stantec.com/" target="_blank" rel="noopener">
-                <img src="Images/Stantec.png" alt="Stantec" />
+              <a href="https://www.stantec.com/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/Stantec.png" alt="Stantec" width="100" height="50" loading="lazy" />
               </a>
             </div>
-
             <div class="item" style="--position: 6">
-              <a href="https://www.seipp.co.nz/" target="_blank" rel="noopener">
-                <img src="Images/seipp-logo.png" alt="Seipp Construction" />
+              <a href="https://www.seipp.co.nz/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/seipp-logo.png" alt="Seipp Construction" width="100" height="50" loading="lazy" />
               </a>
             </div>
-
             <div class="item" style="--position: 7">
-              <a href="https://do.co.nz/" target="_blank" rel="noopener">
-                <img src="Images/do_full.png" alt="Davis Oglivie" />
+              <a href="https://do.co.nz/" target="_blank" rel="noopener noreferrer">
+                <img src="Images/do_full.png" alt="Davis Ogilvie" width="100" height="50" loading="lazy" />
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <section class="mahi" id="mahi">
+      <section class="mahi" id="mahi" aria-labelledby="mahi-heading">
         <div class="content-row">
           <img
+            class="fade-scroll"
             src="Images/2025_new_exec.jpeg"
-            alt="Civil engineering project"
+            alt="2025 CivSoc executive team"
+            width="600"
+            height="400"
+            loading="lazy"
           />
           <div class="text-content">
-            <h2>Our Māhi</h2>
-            <p>
+            <h2 id="mahi-heading" class="reveal">Our Māhi</h2>
+            <p class="reveal-x">
               At the University of Canterbury Civil and Environmental
               Engineering Society we strive to foster a thriving community for
               students by connecting them with industry professionals,
@@ -263,7 +272,7 @@
               engineers to excel both academically and professionally while
               building lasting networks and friendships.
             </p>
-            <nav class="nav-exec">
+            <nav class="nav-exec" aria-label="Exec team link">
               <ul>
                 <li><a href="exec.html">The 2026 Exec Team</a></li>
               </ul>
@@ -275,12 +284,13 @@
       <section
         class="sponsors"
         id="sponsors"
+        aria-labelledby="sponsors-heading"
         style="background-image: url(Images/cq5dam.web.1280.1280.jpeg)"
       >
         <div class="content-row">
-          <div class="text-content">
-            <h2>Our Partners</h2>
-            <p>
+          <div class="text-content">  
+            <h2 id="sponsors-heading" class="reveal">Our Partners</h2>
+            <p class="reveal-x">
               CivSoc is a non-profit organisation dedicated to creating an
               engaging, professional, and supportive environment for all civil
               and environmental engineering students. The generous support from
@@ -288,7 +298,7 @@
               and networking opportunities throughout the year, and we sincerely
               thank them for their continued support.
             </p>
-            <nav class="nav-exec">
+            <nav class="nav-exec" aria-label="Partners page link">
               <ul>
                 <li><a href="partners.html">Partner Information</a></li>
               </ul>
@@ -297,32 +307,31 @@
           <div class="sponsor-logo">
             <div class="logo-parent">
               <div class="logo-container">
-                <div class="sponser-logo-box">
-                  <img src="Images/Isaac copy.png" alt="" />
+                <div class="sponser-logo-box fade-scroll">
+                  <img src="Images/Isaac copy.png" alt="Isaac Construction" width="120" height="60" loading="lazy" />
                 </div>
-                <div class="sponser-logo-box">
-                  <img src="Images/fulton-logo.jpeg" alt="" />
+                <div class="sponser-logo-box fade-scroll">
+                  <img src="Images/fulton-logo.jpeg" alt="Fulton Hogan" width="120" height="60" loading="lazy" />
                 </div>
-                <div class="sponser-logo-box">
-                  <img src="Images/seipp-logo.png" alt="" />
+                <div class="sponser-logo-box fade-scroll">
+                  <img src="Images/seipp-logo.png" alt="Seipp Construction" width="120" height="60" loading="lazy" />
                 </div>
-                <div class="sponser-logo-box">
-                  <img src="Images/970px-Robert_bird_logo.png" alt="" />
+                <div class="sponser-logo-box fade-scroll">
+                  <img src="Images/970px-Robert_bird_logo.png" alt="Robert Bird Group" width="120" height="60" loading="lazy" />
                 </div>
-                <div class="sponser-logo-box">
-                  <img src="Images/Stantec.png" alt="" />
+                <div class="sponser-logo-box fade-scroll">
+                  <img src="Images/Stantec.png" alt="Stantec" width="120" height="60" loading="lazy" />
                 </div>
-                <div class="sponser-logo-box">
-                  <img src="Images/do_full.png" alt="" />
+                <div class="sponser-logo-box fade-scroll">
+                  <img src="Images/do_full.png" alt="Davis Ogilvie" width="120" height="60" loading="lazy" />
                 </div>
               </div>
-
               <div class="logo-container">
-                <div class="sponser-logo-box">
-                  <img src="Images/UC_logo.png" alt="" />
+                <div class="sponser-logo-box fade-scroll">
+                  <img src="Images/UC_logo.png" alt="University of Canterbury" width="120" height="60" loading="lazy" />
                 </div>
-                <div class="sponser-logo-box">
-                  <img src="Images/UCSA_logo.png" alt="" />
+                <div class="sponser-logo-box fade-scroll">
+                  <img src="Images/UCSA_logo.png" alt="University of Canterbury Students' Association" width="120" height="60" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -330,97 +339,74 @@
         </div>
       </section>
     </main>
+
     <footer>
       <div class="footer-container">
-        <!-- Logo on the left -->
         <div class="logofoot">
-          <img src="Images/Sticker_Logo-removebg-preview.png" alt="Site Logo" />
+          <img src="Images/Sticker_Logo-removebg-preview.png" alt="UC Civil & Environmental Engineering Society" width="80" height="80" loading="lazy" />
         </div>
-
-        <!-- Links on the right -->
         <div class="footer-links">
           <ul class="link-column">
             <h3>Socials</h3>
-            <li><a href="https://www.instagram.com/uccivsoc/">Instagram</a></li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/uccivsoc/posts/?feedView=all"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://mail.google.com/mail/?view=cm&to=civsocuc@gmail.com"
-                target="_blank"
-                >Email</a
-              >
-            </li>
+            <li><a href="https://www.instagram.com/uccivsoc/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/uccivsoc/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&to=civsocuc@gmail.com" target="_blank" rel="noopener noreferrer">Email</a></li>
           </ul>
           <ul class="link-column">
             <h3>Navigation</h3>
             <li><a href="mahi.html">Mahi</a></li>
             <li><a href="partners.html">Partners</a></li>
             <li><a href="exec.html">Exec</a></li>
-            <li>
-              <a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register"
-                >REGISTER</a
-              >
-            </li>
+            <li><a href="https://forms.gle/vYm4qpX1Y2LryZPa9" class="register">REGISTER</a></li>
           </ul>
         </div>
         <div class="copyright-statement">
-          © 2026 UC Civil & Environmental Engineering Society
+          © 2026 UC Civil &amp; Environmental Engineering Society
         </div>
       </div>
     </footer>
-    <script src="Scripts/main.js"></script>
-    <script src="Scripts/events.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="Scripts/main.js" defer></script>
+    <script src="Scripts/events.js" defer></script>
     <script>
       $(window).on("load", function () {
-        // Normal fade-out after full load
         setTimeout(function () {
           $(".loader-wrapper").fadeOut(600);
         }, 2000);
       });
 
-      // Create the dismiss button after page starts loading
       $(document).ready(function () {
-        // Add the X button to the loader
         $(".loader-wrapper").append('<div class="loader-dismiss">×</div>');
 
-        // If the page is still not fully loaded after 3 sec, show the button
         setTimeout(function () {
           if (!$("body").hasClass("page-loaded")) {
             $(".loader-dismiss").addClass("show");
           }
         }, 3000);
 
-        // When the X is clicked, hide the loader immediately
         $(document).on("click", ".loader-dismiss", function () {
           $(".loader-wrapper").fadeOut(400);
         });
       });
 
-      // Mark when page actually finishes loading
       $(window).on("load", function () {
         $("body").addClass("page-loaded");
       });
-      const counterE1 = document.querySelector(".counter");
+
+      const counterEl = document.querySelector(".counter");
       let counterNumber = 0;
 
-      // Wait 3 seconds before starting the counter
       setTimeout(function () {
         const updateCounter = setInterval(function () {
           counterNumber++;
-          counterE1.textContent = counterNumber;
-          //edit membership number here
+          counterEl.textContent = counterNumber;
+          // Edit membership number here
           if (counterNumber >= 524) {
             clearInterval(updateCounter);
           }
-        }, 5); // You can adjust the interval speed here (e.g., 100ms per increment)
-      }, 3000); // 3000ms = 3 seconds delay
+        }, 5);
+      }, 3000);
     </script>
   </body>
 </html>

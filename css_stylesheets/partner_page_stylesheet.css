@@ -1,7 +1,7 @@
-/* ================= PARTNERS PAGE (HORIZONTAL ROW) ================= */
+/* ================= PARTNERS PAGE ================= */
 .tier-section {
-  max-width: 900px; /* Slightly wider to accommodate side-by-side */
-  margin: 40px auto;
+  max-width: 900px;
+  margin: 80px auto;
   padding: 0 20px;
 }
 
@@ -13,25 +13,35 @@
   padding-bottom: 10px;
   text-transform: uppercase;
   font-weight: 800;
+  margin-top: 100px;
 }
 
 .sponsor-pane-container {
   display: flex;
   flex-direction: column;
-  gap: 50px; /* Space between each partner row */
+  gap: 50px;
 }
 
+/* Outer pane is now a column — top row + button stacked */
 .sponsor-pane {
   display: flex;
-  flex-direction: row; /* Desktop: Side-by-side */
-  align-items: center; /* Center logo vertically relative to text */
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Top row: logo left, text right — side by side */
+.sponsor-pane-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 30px;
   width: 100%;
 }
 
 /* ================= IMAGE LEFT ================= */
 .sponser-img-container {
-  flex: 0 0 200px; /* Fixed width for logo area so text aligns */
+  flex: 0 0 200px;
   height: 120px;
   display: flex;
   align-items: center;
@@ -46,10 +56,10 @@
 
 /* ================= CONTENT RIGHT ================= */
 .pane-content {
-  flex: 1; /* Takes up remaining space */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Keeps text and button left-aligned */
+  align-items: flex-start;
   text-align: left;
 }
 
@@ -63,22 +73,42 @@
   font-size: 1rem;
   line-height: 1.5;
   color: #444;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
-/* ================= MOBILE / NARROW MODE ================= */
+/* ================= BUTTON BELOW ================= */
+.sponsor-pane > .nav-exec {
+  margin: 0;
+  padding: 0;
+}
+
+.sponsor-pane > .nav-exec ul {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 680px) {
-  .sponsor-pane {
-    flex-direction: column; /* Stack vertically on small screens */
+  .sponsor-pane-top {
+    flex-direction: column;
     align-items: flex-start;
     gap: 15px;
   }
 
   .sponser-img-container {
-    flex: 0 0 auto; /* Remove fixed width on mobile */
+    flex: 0 0 auto;
     height: 80px;
     width: 100%;
-    justify-content: flex-start; /* Logo stays left on mobile */
+    justify-content: flex-start;
+  }
+
+  .sponsor-pane {
+    gap: 14px;
+    /* Ensures clear separation from next pane */
+    padding-bottom: 6px;
   }
 
   .tier-title {
