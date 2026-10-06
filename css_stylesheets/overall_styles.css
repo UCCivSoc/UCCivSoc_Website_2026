@@ -268,9 +268,10 @@ header .logo img {
     top: 70px;
     right: 10px;
     flex-direction: column;
-    width: 100px;
+    width: max-content;
+    min-width: 150px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    background: rgba(60, 117, 184, 0.9); /* make parent fully transparent */
+    background: transparent; /* the ul provides the blue */
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
@@ -282,15 +283,25 @@ header .logo img {
   /* ul in mobile menu */
   .nav-links ul {
     flex-direction: column;
-    padding: 10px;
+    align-items: stretch;
+    gap: 8px;
+    padding: 8px;
     border: none;
+    width: 100%;
   }
 
   /* links in mobile menu */
   .nav-links a {
     font-size: 0.95rem;
-    padding: 8px 10px;
+    padding: 10px 5px;
     display: block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .nav-links a.register {
+    margin-top: 6px;
   }
 }
 
